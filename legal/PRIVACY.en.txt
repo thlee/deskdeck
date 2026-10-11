@@ -1,5 +1,5 @@
 DeskDeck public free evaluation privacy and communication notice
-Version: 2026-10-11 · Provider: 이태호 · Contact: alfalf@gmail.com
+Version: 2026-10-11 · Provider: 이태호 · Contact: deskdeck.app@gmail.com
 
 Local storage
 Installed Studio keeps settings under %LOCALAPPDATA%\DeskDeck; program files are under %LOCALAPPDATA%\Programs\DeskDeck. An explicitly selected data directory overrides the settings location. Local data includes buttons, executable paths, shortcuts/macros, paired devices, window size, selected city, weather cache and diagnostic logs. Macro text is encrypted with Windows user-scoped DPAPI and decrypted for editing/execution. This is not a password-manager guarantee against malware running as the same user.
@@ -23,4 +23,4 @@ Public website and downloads
 The site and downloads are hosted by GitHub Pages and GitHub Releases. GitHub may process IP addresses and service-operation data under its own privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement . The introduction site includes no separate advertising, visitor analytics or donation payments. Public GitHub issues are visible to everyone; do not post personal data or passwords.
 
 Removal
-Exit Studio and uninstall using Windows Apps. To remove settings, carefully delete %LOCALAPPDATA%\DeskDeck and any backup/data folders you selected, after preserving needed information. Android data can be cleared in Android App info. Use the ESP32 device setup/reset guidance for board credentials. Deleted settings may not be recoverable. Privacy/security contact: alfalf@gmail.com.
+Exit Studio and uninstall using Windows Apps. To remove settings, carefully delete %LOCALAPPDATA%\DeskDeck and any backup/data folders you selected, after preserving needed information. Android data can be cleared in Android App info. Use the ESP32 device setup/reset guidance for board credentials. Deleted settings may not be recoverable. Privacy/security contact: deskdeck.app@gmail.com.

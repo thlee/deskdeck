@@ -1,5 +1,5 @@
 ﻿DeskDeck Public Free Evaluation License
-Version: 2026-10-11-public / Provider: 이태호 / Contact: alfalf@gmail.com
+Version: 2026-10-11-public / Provider: 이태호 / Contact: deskdeck.app@gmail.com
 
 1. Free use permission
 Anyone may install and use this public free evaluation version of DeskDeck on Windows PCs and supported devices they own, administer or are authorized to use, for personal use and in a workplace, without charge. This non-exclusive permission has no time limit. Payment, donations, subscriptions and account registration are not required. There is no automatic payment or conversion to a paid license. Follow your organization's security and software-use policies.
@@ -29,7 +29,7 @@ The provider may offer new versions, additional features or services under separ
 A transfer of DeskDeck-owned rights or business, or a change of operator, does not remove the free permission already lawfully granted for this version or rights under third-party licenses. Only rights actually held by the transferor may be transferred; third-party open-source software is not claimed as exclusive property. Any necessary transfer of personal information will separately follow applicable notice, consent and other legal requirements.
 
 10. Ending use and contact
-You may stop using and uninstall the software. Follow the privacy notice to delete any retained settings or backups. Following a request to remedy a material breach, the provider may terminate the affected evaluation permission. Contact: 이태호, alfalf@gmail.com. Republic of Korea law and applicable mandatory rules govern; statutory jurisdiction and mandatory consumer rights remain unaffected.
+You may stop using and uninstall the software. Follow the privacy notice to delete any retained settings or backups. Following a request to remedy a material breach, the provider may terminate the affected evaluation permission. Contact: 이태호, deskdeck.app@gmail.com. Republic of Korea law and applicable mandatory rules govern; statutory jurisdiction and mandatory consumer rights remain unaffected.
 
 Continuing installation indicates agreement to this evaluation license and the accompanying terms for the applicable Microsoft components. Other open-source components remain available under their own licenses.
 

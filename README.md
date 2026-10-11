@@ -26,6 +26,6 @@ Windows 설치파일은 아직 Authenticode 서명이 없어 게시자 경고가
 GitHub가 자동으로 표시하는 “Source code (zip/tar.gz)”에는 **이 소개 사이트의 파일만** 들어 있습니다. 오픈소스 대응 자료는 별도 Sources ZIP을 선택하세요.
 
 ## 문의
-[문제 제보](https://github.com/thlee/deskdeck/issues) · 이태호 · alfalf@gmail.com
+[문제 제보](https://github.com/thlee/deskdeck/issues) · DeskDeck · deskdeck.app@gmail.com
 
 버전, 연결 방법, 재현 순서, 오류 문구를 알려 주세요. 비밀번호·개인 설정·기기 전체 백업을 공개 이슈에 올리지 마세요. 보안 문제는 이메일로 알려 주세요.
