@@ -4,7 +4,7 @@
 
 자주 하는 일, 한 번의 터치로. 휴대폰·보조 모니터·ESP32 화면을 PC의 앱 실행·단축키·매크로 패널로 사용하세요.
 
-**[소개 페이지](https://thlee.github.io/deskdeck/)** · **[Windows 설치파일](https://github.com/thlee/deskdeck/releases/latest)** · **[시작하기](https://thlee.github.io/deskdeck/start.html)**
+**[English](https://thlee.github.io/deskdeck/index.en.html)** · **[소개 페이지](https://thlee.github.io/deskdeck/)** · **[Windows 설치파일](https://github.com/thlee/deskdeck/releases/latest)** · **[시작하기](https://thlee.github.io/deskdeck/start.html)**
 
 ## 현재 배포
 - DeskDeck Studio **0.8.14**, Windows 10 1809+ / Windows 11, x64.
@@ -21,7 +21,7 @@ Windows 설치파일은 아직 Authenticode 서명이 없어 게시자 경고가
 
 이 저장소는 소개 페이지·사용 안내·바이너리 배포용입니다. Studio와 Android 자체 소스는 비공개이며, 무료 배포가 오픈소스 라이선스를 의미하지 않습니다. 라이선스상 필요한 제3자 소스, GPL 설치 어댑터, LGPL 펌웨어 재링크 자료는 설치파일 및 릴리스의 별도 소스 ZIP에 함께 제공합니다.
 
-향후 새 버전·추가 기능·서비스나 자발적 후원은 별도 조건으로 제공할 수 있습니다. 이미 받은 이 버전의 무료 사용권을 소급 유료화하지 않으며, 제품 양도·운영자 변경 후에도 기존 사용권은 유지됩니다.
+이미 받은 이 버전의 무료 사용권을 소급 유료화하지 않으며, 제품 양도·운영자 변경 후에도 기존 사용권은 유지됩니다.
 
 GitHub가 자동으로 표시하는 “Source code (zip/tar.gz)”에는 **이 소개 사이트의 파일만** 들어 있습니다. 오픈소스 대응 자료는 별도 Sources ZIP을 선택하세요.
 
