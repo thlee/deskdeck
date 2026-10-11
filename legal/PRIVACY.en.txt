@@ -1,0 +1,26 @@
+DeskDeck public free evaluation privacy and communication notice
+Version: 2026-10-11 · Provider: 이태호 · Contact: alfalf@gmail.com
+
+Local storage
+Installed Studio keeps settings under %LOCALAPPDATA%\DeskDeck; program files are under %LOCALAPPDATA%\Programs\DeskDeck. An explicitly selected data directory overrides the settings location. Local data includes buttons, executable paths, shortcuts/macros, paired devices, window size, selected city, weather cache and diagnostic logs. Macro text is encrypted with Windows user-scoped DPAPI and decrypted for editing/execution. This is not a password-manager guarantee against malware running as the same user.
+
+Device communication
+Studio exchanges its rendered deck/widget images, action identifiers and touch input with registered devices. It does not broadcast the entire PC desktop. Wi-Fi uses local discovery and pairing; the phone wireless connection uses TLS. AOA uses USB. A registered device can trigger configured PC actions; do not share pairing credentials. ESP32 Wi-Fi settings and full flash backups can contain passwords. Backups stay in the user-selected location and must not be sent as support attachments.
+
+Optional external services
+Korean observation locations use the KMA XML feed. Other coordinate locations use MET Norway: the selected latitude/longitude rounded to two decimals, your IP address and app identification are sent to the provider. MET Norway may log IP addresses and coordinates in Norway. Responses are cached. City-name searches use the bundled GeoNames catalog and are not sent to a search service. OS location follows OS permissions; manual city selection is available. Fetching a website icon contacts that website.
+
+Microsoft WebView2
+WebView2 uses Microsoft Defender SmartScreen by default. SmartScreen information and diagnostic data may be sent to Microsoft; the Evergreen Runtime can receive Microsoft updates. If absent, setup downloads the Runtime from Microsoft. Read https://aka.ms/privacy and https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy .
+
+Android distribution and optional USB driver
+QR/browser APK installation uses a temporary local HTTP download page. Other parties able to reach the page on the network may download the APK. Use a trusted network and close the install window afterwards. Android controls app installation; the public release APK disables debugging and retains the previous signing certificate identity for in-place updates. It is not an app-store release. UsbDk for AOA is a separate optional installation, not bundled or silently installed. ADB/debugging tools are excluded.
+
+Permissions and support
+Normal setup and basic use do not require administrator rights. Firewall changes and the optional driver can require separate elevation. Sign-in startup can be changed in General settings. Exit from the tray to stop Studio communication/input processing. DeskDeck does not automatically upload account, usage or crash information to its provider. Only email/material you choose to send reaches the provider. Logs can contain paths and error messages; review them before sharing.
+
+Public website and downloads
+The site and downloads are hosted by GitHub Pages and GitHub Releases. GitHub may process IP addresses and service-operation data under its own privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement . The introduction site includes no separate advertising, visitor analytics or donation payments. Public GitHub issues are visible to everyone; do not post personal data or passwords.
+
+Removal
+Exit Studio and uninstall using Windows Apps. To remove settings, carefully delete %LOCALAPPDATA%\DeskDeck and any backup/data folders you selected, after preserving needed information. Android data can be cleared in Android App info. Use the ESP32 device setup/reset guidance for board credentials. Deleted settings may not be recoverable. Privacy/security contact: alfalf@gmail.com.

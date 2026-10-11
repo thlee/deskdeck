@@ -1,0 +1,34 @@
+DeskDeck Public Free Evaluation License
+Version: 2026-10-11-public / Provider: 이태호 / Contact: alfalf@gmail.com
+
+1. Free use permission
+Anyone may install and use this public free evaluation version of DeskDeck on Windows PCs and supported devices they own, administer or are authorized to use, for personal use and in a workplace, without charge. This non-exclusive permission has no time limit. Payment, donations, subscriptions and account registration are not required. There is no automatic payment or conversion to a paid license. Follow your organization's security and software-use policies.
+
+2. Ownership and distribution
+Free public availability does not transfer copyright or make the proprietary Studio or Android source open source. Rights in DeskDeck-owned software and designs remain with 이태호 or a lawful successor; third-party rights remain with their respective owners. Necessary installation and backup copies are permitted. You may freely share official introduction and download links. Resale, distribution of modified DeskDeck-owned programs, separate download mirrors, modification of proprietary code or its incorporation into other products require separate permission from the rights holder. These restrictions do not override rights granted by applicable law, third-party licenses or the firmware relinking permission.
+
+3. Third-party components and source
+Bundled Microsoft terms and the applicable GPL, LGPL and other open-source licenses govern their respective components and prevail in a conflict. This agreement does not restrict rights to use, copy, modify or redistribute GPL/LGPL components, or reverse engineering for debugging modifications to those components. Corresponding-source and firmware relinking materials accompany the evaluation package. This does not license the entire Studio as open source. The separate firmware installation adapter uses the GPL-3.0-or-later terms in its own folder. Contact the provider if the accompanying source package is missing or unreadable.
+
+4. Microsoft components
+Use and distribute Microsoft components only as part of DeskDeck, not as a standalone product. Comply with the protective conditions in the accompanying Microsoft .NET Library, Windows SDK, WebView2 Runtime and Python Windows Microsoft Distributable Code terms. Except as permitted by applicable law or applicable open-source licenses, do not bypass technical restrictions, reverse engineer, decompile or disassemble them, remove or alter copyright or trademark notices, or use them unlawfully. Use Microsoft code only on Microsoft operating systems, runtime technologies or application platforms; do not include it in malicious or deceptive programs. Microsoft's ownership, warranty exclusions, liability limitations and export conditions apply within the scope of the accompanying original terms. Microsoft does not produce or endorse DeskDeck. The relevant third-party terms take precedence over this agreement for their components.
+
+5. Settings and PC control
+DeskDeck executes configured applications, shortcuts, text and macros. Use only authorized devices and follow workplace security policies. Check the destination window and macro content before sending text. Encrypted macro storage is not a password-manager guarantee. Verify the device and preserve needed backups before firmware installation or recovery.
+
+6. Privacy and communication
+The separate privacy and communication notice describes local storage, device communication, weather and Microsoft-related traffic. Reading that notice does not grant operating-system permissions or blanket consent to optional data transfers. Support email and diagnostic material are sent by you, not automatically; do not send passwords, complete device backups or other sensitive information.
+
+7. Evaluation limitations
+This evaluation software may contain defects and change. Uninterrupted operation, fitness for a particular purpose and compatibility with every device or application are not guaranteed. Warranties and liability are limited only to the extent permitted by applicable law. Nothing excludes liability for intentional misconduct or gross negligence, privacy obligations or mandatory rights. Third-party components retain their respective warranty and liability terms.
+
+8. Future versions, donations and operation
+The provider may offer new versions, additional features or services under separate paid terms, or introduce voluntary donations in the future. This does not solicit donations now or promise a paid conversion. Scope, price and terms will be stated in advance and require a separate choice and agreement. Free permission already granted for this version will not be charged retroactively or made conditional on purchasing a paid offering. Perpetually free updates, new features, maintenance or continued external services are not promised.
+
+9. Transfer of rights
+A transfer of DeskDeck-owned rights or business, or a change of operator, does not remove the free permission already lawfully granted for this version or rights under third-party licenses. Only rights actually held by the transferor may be transferred; third-party open-source software is not claimed as exclusive property. Any necessary transfer of personal information will separately follow applicable notice, consent and other legal requirements.
+
+10. Ending use and contact
+You may stop using and uninstall the software. Follow the privacy notice to delete any retained settings or backups. Following a request to remedy a material breach, the provider may terminate the affected evaluation permission. Contact: 이태호, alfalf@gmail.com. Republic of Korea law and applicable mandatory rules govern; statutory jurisdiction and mandatory consumer rights remain unaffected.
+
+Continuing installation indicates agreement to this evaluation license and the accompanying terms for the applicable Microsoft components. Other open-source components remain available under their own licenses.
