@@ -1,13 +1,13 @@
 {
-  "version": "0.8.13",
+  "version": "0.8.14",
   "date": "2026-10-11",
   "platform": "windows-x64",
-  "installer": "https://github.com/thlee/deskdeck/releases/download/v0.8.13/DeskDeck-Setup-0.8.13-x64.exe",
-  "release": "https://github.com/thlee/deskdeck/releases/tag/v0.8.13",
-  "android": "0.5.21",
+  "installer": "https://github.com/thlee/deskdeck/releases/download/v0.8.14/DeskDeck-Setup-0.8.14-x64.exe",
+  "release": "https://github.com/thlee/deskdeck/releases/tag/v0.8.14",
+  "android": "0.5.22",
   "firmware": "0.8.1",
   "terms": "2026-10-11-public",
   "donations": false,
-  "sha256": "fdc0c28a0e34fbcb798c3d7c24e6466e09ff6e924e6139d0f6c84aeda4aa0df3",
-  "size_bytes": 347863346
+  "sha256": "1ee5aa048b51f2343ef39841a182093b31d9d323bf8a3d58e0af9b38a16acb98",
+  "size_bytes": 347850959
 }

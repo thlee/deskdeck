@@ -1,2 +1,2 @@
-14196ad18004bafa3e056ee83c61c366e9b4dfe21972a56b6db294f9c291caf4  DeskDeck-Component-Sources-0.8.13.zip
-fdc0c28a0e34fbcb798c3d7c24e6466e09ff6e924e6139d0f6c84aeda4aa0df3  DeskDeck-Setup-0.8.13-x64.exe
+1ee5aa048b51f2343ef39841a182093b31d9d323bf8a3d58e0af9b38a16acb98  DeskDeck-Setup-0.8.14-x64.exe
+6122beca2b6f29590305075eb9c3f98e3c254ac141491de2330204ad574e4be6  DeskDeck-Component-Sources-0.8.14.zip

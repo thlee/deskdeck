@@ -7,8 +7,8 @@
 **[소개 페이지](https://thlee.github.io/deskdeck/)** · **[Windows 설치파일](https://github.com/thlee/deskdeck/releases/latest)** · **[시작하기](https://thlee.github.io/deskdeck/start.html)**
 
 ## 현재 배포
-- DeskDeck Studio **0.8.13**, Windows 10 1809+ / Windows 11, x64.
-- Android **0.5.21**, Android 8.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
+- DeskDeck Studio **0.8.14**, Windows 10 1809+ / Windows 11, x64.
+- Android **0.5.22**, Android 8.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
 - JC3248W535 ESP32-S3 펌웨어 **0.8.1**. USB·Wi-Fi 및 초기 설치/백업 안내.
 - 가상 DeskDeck: 별도 장치 없이 마우스나 작은 터치·보조 모니터로 사용할 수 있습니다.
 - 현재 공개 버전은 무료·기간 제한 없음. 결제·계정 등록 없음. Mac/iPhone 설치파일은 제공하지 않습니다.
