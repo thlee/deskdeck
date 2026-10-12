@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "widgets": [
+    {
+      "id": "deskdeck.upbit",
+      "package": "deskdeck.upbit.deskdeck-widget.zip",
+      "minStudio": "0.8.18",
+      "published": "2026-10-13",
+      "name": {
+        "ko": "코인 시세",
+        "en": "Coin prices"
+      },
+      "description": {
+        "ko": "관심 있는 코인의 현재가와 전일 대비 등락률을 한 화면에서 확인하세요. 업비트 원화마켓의 코인을 골라 나만의 시세 화면을 만들 수 있습니다.",
+        "en": "Keep your favorite crypto prices and daily changes in view. Choose coins from Upbit’s KRW markets and build your own price board."
+      },
+      "features": {
+        "ko": [
+          "코인 1~10개 선택·순서 변경",
+          "10초·30초·60초 갱신 간격",
+          "한국어·영어·일본어·중국어 지원"
+        ],
+        "en": [
+          "Choose and reorder 1–10 coins",
+          "Refresh every 10, 30 or 60 seconds",
+          "Korean, English, Japanese and Chinese"
+        ]
+      },
+      "preview": {
+        "ko": "upbit.ko.png",
+        "en": "upbit.en.png"
+      },
+      "network": [
+        "api.upbit.com"
+      ],
+      "version": "1.0.0",
+      "url": "downloads/widgets/deskdeck.upbit-1.0.0.deskdeck-widget.zip",
+      "sha256": "60c530e41e30003274f302a650a11f28a52429f1f069894e5410c311a5f6eae6",
+      "size": 5756
+    }
+  ]
+}

@@ -6,6 +6,11 @@
 
 **[English](https://thlee.github.io/deskdeck/index.en.html)** · **[소개 페이지](https://thlee.github.io/deskdeck/)** · **[Windows 설치파일](https://github.com/thlee/deskdeck/releases/latest)** · **[시작하기](https://thlee.github.io/deskdeck/start.html)**
 
+## 위젯 다운로드
+[위젯 라이브러리](https://thlee.github.io/deskdeck/widgets.html) · [Widgets (English)](https://thlee.github.io/deskdeck/widgets.en.html)
+
+코인 시세 ZIP을 다운로드하고 Studio의 전체화면 → 위젯 관리 목록에 끌어다 놓으세요. 기본 시계·네코·미디어는 별도 다운로드 없이 사용합니다.
+
 ## 현재 배포
 - DeskDeck Studio **0.8.18**, Windows 10 1809+ / Windows 11, x64.
 - Android **0.5.24**, Android 8.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
