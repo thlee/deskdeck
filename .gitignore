@@ -4,6 +4,7 @@ Thumbs.db
 *.exe
 *.apk
 *.zip
+!downloads/widgets/*.deskdeck-widget.zip
 *.jks
 *.keystore
 .env*
