@@ -1,1 +1,2 @@
 60c530e41e30003274f302a650a11f28a52429f1f069894e5410c311a5f6eae6  deskdeck.upbit-1.0.0.deskdeck-widget.zip
+63f215f431267368783e55598d6516ff7433fa66ccf0de001a2373e743be622e  deskdeck.news-1.0.0.deskdeck-widget.zip

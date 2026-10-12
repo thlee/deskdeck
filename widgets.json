@@ -37,6 +37,45 @@
       "url": "downloads/widgets/deskdeck.upbit-1.0.0.deskdeck-widget.zip",
       "sha256": "60c530e41e30003274f302a650a11f28a52429f1f069894e5410c311a5f6eae6",
       "size": 5756
+    },
+    {
+      "id": "deskdeck.news",
+      "package": "deskdeck.news.deskdeck-widget.zip",
+      "minStudio": "0.8.19",
+      "published": "2026-10-13",
+      "name": {
+        "ko": "뉴스",
+        "en": "News"
+      },
+      "description": {
+        "ko": "RSS·Atom 뉴스 제목과 출처를 확인하고, 제목을 눌러 PC에서 원문을 여세요. 기본 NASA 영문 뉴스 외에 원하는 공개 피드를 추가할 수 있습니다.",
+        "en": "Read RSS/Atom headlines and sources, then tap to open the original story on your PC. Start with NASA news in English or add your own public feeds."
+      },
+      "features": {
+        "ko": [
+          "공개 HTTPS 피드 최대 8개",
+          "5·15·30분 갱신, 제목 자동·수동 전환",
+          "Studio 0.8.19 이상 필요 · 별도 ZIP 설치"
+        ],
+        "en": [
+          "Up to 8 public HTTPS feeds",
+          "5/15/30-minute refresh; automatic or manual headlines",
+          "Requires Studio 0.8.19+ · Separate ZIP installation"
+        ]
+      },
+      "preview": {
+        "ko": "news.ko.png",
+        "en": "news.en.png"
+      },
+      "network": [],
+      "networkLabel": {
+        "ko": "NASA 및 사용자가 설정한 공개 RSS·Atom 제공처",
+        "en": "NASA and user-configured public RSS/Atom providers"
+      },
+      "version": "1.0.0",
+      "url": "downloads/widgets/deskdeck.news-1.0.0.deskdeck-widget.zip",
+      "sha256": "63f215f431267368783e55598d6516ff7433fa66ccf0de001a2373e743be622e",
+      "size": 1811
     }
   ]
 }
