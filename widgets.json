@@ -72,10 +72,14 @@
         "ko": "NASA 및 사용자가 설정한 공개 RSS·Atom 제공처",
         "en": "NASA and user-configured public RSS/Atom providers"
       },
-      "version": "1.0.0",
-      "url": "downloads/widgets/deskdeck.news-1.0.0.deskdeck-widget.zip",
-      "sha256": "63f215f431267368783e55598d6516ff7433fa66ccf0de001a2373e743be622e",
-      "size": 1811
+      "updateNote": {
+        "ko": "1.0.1은 설치·업데이트 안내를 보완한 버전입니다. 최근 피드 편집·여러 뉴스 표시·스크롤 개선은 Studio와 ESP32 펌웨어 업데이트가 별도로 필요하며, 현재 공개 Windows 0.8.19 설치파일에는 모두 포함되어 있지 않습니다.",
+        "en": "1.0.1 updates installation and upgrade guidance. Recent feed editing, multi-headline and scrolling improvements require separate Studio and, for local ESP32 scrolling, firmware updates; they are not all included in the currently published Windows 0.8.19 installer."
+      },
+      "version": "1.0.1",
+      "url": "downloads/widgets/deskdeck.news-1.0.1.deskdeck-widget.zip",
+      "sha256": "b6766806d3989e7aa09584de823399673afa6fdf39593988341ef06b308dfcb3",
+      "size": 2692
     }
   ]
 }
