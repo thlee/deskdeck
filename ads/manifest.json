@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "ads": [
+    {
+      "asset": "deskdeck-house-v1.rgb565",
+      "sha256": "3d0940f8f9900836cac56ea23d4bf17191f0f9d71991db3cead4afaa20271021",
+      "from": "2026-10-13T00:00:00Z",
+      "until": "2030-01-01T00:00:00Z",
+      "sponsor": "DeskDeck"
+    }
+  ]
+}
