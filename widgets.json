@@ -73,13 +73,61 @@
         "en": "NASA and user-configured public RSS/Atom providers"
       },
       "updateNote": {
-        "ko": "1.0.1은 설치·업데이트 안내를 보완한 버전입니다. 최근 피드 편집·여러 뉴스 표시·스크롤 개선은 Studio와 ESP32 펌웨어 업데이트가 별도로 필요하며, 현재 공개 Windows 0.8.19 설치파일에는 모두 포함되어 있지 않습니다.",
-        "en": "1.0.1 updates installation and upgrade guidance. Recent feed editing, multi-headline and scrolling improvements require separate Studio and, for local ESP32 scrolling, firmware updates; they are not all included in the currently published Windows 0.8.19 installer."
+        "ko": "Studio 0.8.26에는 피드 편집·여러 뉴스 표시 개선이 포함됩니다. ESP32의 기기 내 스크롤은 호환 펌웨어가 필요하며 Studio 설치와 기기 펌웨어 업데이트는 별도입니다.",
+        "en": "Studio 0.8.26 includes feed editing and multi-headline improvements. Local scrolling on ESP32 requires compatible firmware; updating Studio does not automatically update board firmware."
       },
       "version": "1.0.1",
       "url": "downloads/widgets/deskdeck.news-1.0.1.deskdeck-widget.zip",
       "sha256": "b6766806d3989e7aa09584de823399673afa6fdf39593988341ef06b308dfcb3",
       "size": 2692
+    },
+    {
+      "id": "deskdeck.othello",
+      "package": "deskdeck.othello.deskdeck-widget.zip",
+      "minStudio": "0.8.26",
+      "published": "2026-10-15",
+      "name": {
+        "ko": "오델로",
+        "en": "Othello"
+      },
+      "description": {
+        "ko": "검은 돌과 흰 돌을 뒤집으며 즐기는 작은 보드게임입니다. 컴퓨터와 대결하거나 같은 화면에서 두 사람이 번갈아 플레이하세요.",
+        "en": "Flip black and white disks in a compact board game. Play against the computer or take turns with a friend on the same screen."
+      },
+      "features": {
+        "ko": [
+          "컴퓨터 대결·2인 플레이, 쉬움·보통 난이도",
+          "놓을 자리 표시·한 수 되돌리기·새 게임",
+          "네트워크 없이 실행 · 한국어·영어·일본어·중국어 지원"
+        ],
+        "en": [
+          "Computer or local two-player mode; Easy and Normal difficulty",
+          "Legal-move hints, undo and new game",
+          "No network access; Korean, English, Japanese and Chinese"
+        ]
+      },
+      "preview": {
+        "ko": "othello.ko.png",
+        "en": "othello.ko.png"
+      },
+      "previewCaption": {
+        "ko": "오델로 실제 시작 화면입니다.",
+        "en": "Actual opening board, shown in Korean."
+      },
+      "network": [],
+      "offline": true,
+      "networkLabel": {
+        "ko": "없음 — Studio에서 오프라인 실행",
+        "en": "None — runs offline in Studio"
+      },
+      "updateNote": {
+        "ko": "Studio 0.8.26 이상이 필요합니다. ZIP 추가 후 위젯 관리에서 사용을 켜고 저장하세요. 대국은 Studio를 종료하면 초기화됩니다.",
+        "en": "Requires Studio 0.8.26 or later. Enable the widget and save in Manage widgets after importing the ZIP. Games reset when Studio exits."
+      },
+      "version": "1.0.0",
+      "url": "downloads/widgets/deskdeck.othello-1.0.0.deskdeck-widget.zip",
+      "sha256": "4ffca93204dfcd132d7b8b9aa4da9a399f31acd2a15121af3a996f68b155fddf",
+      "size": 6475
     }
   ]
 }
