@@ -42,3 +42,5 @@
 
 /* Actual Studio/device renderer capture, without a recreated HTML button layout. */
 .deck-capture{position:relative;border:1px solid #3d505c;border-radius:18px;overflow:hidden;background:#080810;box-shadow:0 24px 65px #0005}.deck-capture img{display:block;width:100%;height:auto}
+
+.download-terms{font-size:13px;line-height:1.7;max-width:38rem;margin:10px 0 0}.download-box .download-terms{max-width:25rem}
