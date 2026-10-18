@@ -28,6 +28,11 @@ Turn a phone, tablet, second monitor or ESP32 display into your own PC control p
 
 코인 시세·뉴스·오델로 ZIP을 다운로드하고 Studio의 전체화면 → 위젯 관리 목록에 끌어다 놓으세요. 기본 시계·네코·미디어는 별도 다운로드 없이 사용합니다.
 
+## 테마 다운로드
+[테마 라이브러리](https://thlee.github.io/deskdeck/themes.html) · [Themes (English)](https://thlee.github.io/deskdeck/themes.en.html)
+
+데키 — 민트 도우미 테마를 내려받아 **보기 → 테마** 창에 ZIP을 끌어다 놓고 적용하세요. 배경 이미지와 버튼 색상을 함께 바꾸며 기존 버튼·매크로 설정은 유지됩니다.
+
 ## 현재 배포
 - DeskDeck Studio **0.9.31**, Windows 10 1809+ / Windows 11, x64.
 - Android **0.5.44**, Android 5.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
