@@ -6,26 +6,29 @@
 
 **[English](https://thlee.github.io/deskdeck/index.en.html)** · **[소개 페이지](https://thlee.github.io/deskdeck/)** · **[Windows 설치파일](https://github.com/thlee/deskdeck/releases/latest)** · **[시작하기](https://thlee.github.io/deskdeck/start.html)**
 
-## 업데이트 지원이 끝난 안드로이드도, PC 컨트롤러로
+## 나만의 PC 컨트롤 패널
 
-제조사 업데이트 지원이 끝나고 최신 앱을 쓰기 버거워진 휴대폰·태블릿도 PC용 터치 컨트롤러로 다시 활용하세요. **Android 5.0 이상**에서 앱 실행·단축키·매크로·미디어 조작을 지원하고, 전체화면 시계와 위젯도 표시할 수 있습니다. PC의 Studio가 주요 작업을 처리하고 기기가 화면 표시·터치 입력을 담당합니다.
+- **자주 쓰는 동작을 한 번에:** 앱 실행, 단축키, 파일·폴더·URL 열기와 미디어 조작을 원하는 버튼에 배치합니다.
+- **반복 작업은 매크로로:** 버튼 동작·단축키·문자열·대기를 순서대로 조합합니다.
+- **내 화면과 취향에 맞게:** 휴대폰·태블릿·보조 모니터·ESP32 화면을 활용하고, 테마와 전체화면 위젯으로 꾸밉니다.
+- **오래된 기기에도 새 역할을:** Android 5.0 이상을 지원해 제조사 업데이트 지원이 끝난 기기도 PC 컨트롤러로 다시 활용할 수 있습니다.
+
+### 오래된 안드로이드 활용 사례
+
+주요 작업은 PC의 Studio가 처리하고, Android 기기는 화면 표시와 터치 입력을 맡습니다. 휴대폰·태블릿은 같은 APK를 사용합니다.
 
 | 실제 사용한 기기 | 테스트한 Android | 확인한 사용 예 |
 | --- | --- | --- |
 | Samsung Galaxy S8 (SM-G950N) | Android 9 | Wi-Fi 연결, USB AOA 버튼 조작·재연결 |
 | LG G Pad 8.0 (LG-V480) | Android 5.0.2 | Wi-Fi·USB AOA 연결, 버튼 표시, Studio 재시작 후 자동 재연결 |
 
-개발 중 실제 사용한 예시이며 모든 모델·OS 조합이나 공개 버전의 모든 기능을 보증하는 목록은 아닙니다. 기종별 USB 호환성을 확인하세요. 휴대폰·태블릿은 같은 APK를 사용합니다.
+개발 중 실제 사용한 예시이며 모든 모델·OS 조합이나 공개 버전의 모든 기능을 보증하는 목록은 아닙니다. 기종별 USB 호환성을 확인하세요. [기기 사례와 제조사 공식 업데이트 이력](https://thlee.github.io/deskdeck/#reuse)을 참고하세요. DeskDeck이 Android 보안 지원을 연장하지는 않습니다.
 
-**공식 업데이트 이력:** [삼성 SM-G950F 이력](https://doc.samsungmobile.com/SM-G950F/000092170702/mlt.html)에는 Android 9 업그레이드가 **2019년**으로 기록되어 있지만 이후 수정 업데이트도 있습니다. 테스트 모델 SM-G950N을 포함한 모든 S8의 지원 종료 연도로 일반화하지 않습니다. LG-V480 개별 OS 지원 종료 연도는 공식 확인이 되지 않았습니다. [LG의 **2025-06-30** 공지](https://solutions.lg.com/us/support/announcements-detail/notice-on-termination-of-services-of-lg-electronics-mobile-phone-software-upgrade-update-center-and-lg-bridge-USNTC20250410200140)는 전체 모바일 업데이트 서비스 종료이며 개별 모델의 마지막 OS 업데이트 날짜가 아닙니다. 출처 확인: 2026-10-18. DeskDeck이 Android 보안 지원을 연장하지는 않습니다.
+## Everyday tasks, one touch away
 
-## Updates ended. Its usefulness hasn’t.
+Turn a phone, tablet, second monitor or ESP32 display into your own PC control panel. Launch apps, use shortcuts, combine actions into macros, control media, and customize your screen with themes and full-screen widgets.
 
-Turn an **Android 5.0+ phone or tablet** into a PC touch controller even after manufacturer updates end — for apps, shortcuts, macros and media. Studio on the PC handles the main work; the Android device displays controls and sends taps. Full-screen clocks and widgets give it another role between tasks.
-
-Physically used during development: **Galaxy S8 (SM-G950N, Android 9)** with Wi-Fi and USB AOA button actions/reconnection, and **LG G Pad 8.0 (LG-V480, Android 5.0.2)** with Wi-Fi/USB AOA, button display and reconnection after restarting Studio. These are examples, not guarantees for every model, OS or public-release feature.
-
-Samsung’s linked SM-G950F history records the Android 9 upgrade in **2019**, with later maintenance updates; this is not a universal S8 support end date. An official LG-V480 OS support end year could not be verified. LG’s **June 30, 2025** notice concerns closure of its mobile update services, not that model’s final OS update. OS upgrades and security support are separate. [Device examples and official sources](https://thlee.github.io/deskdeck/index.en.html#reuse).
+**Reuse hardware you already own:** Android 5.0+ support gives older phones and tablets a useful role, including devices past manufacturer update support. Studio on your PC handles the main work. Galaxy S8 (SM-G950N, Android 9) and LG G Pad 8.0 (LG-V480, Android 5.0.2) were used during development with Wi-Fi and USB AOA. Compatibility varies by device; DeskDeck does not extend Android security support. [Device examples and official update history](https://thlee.github.io/deskdeck/index.en.html#reuse).
 
 ## 위젯 다운로드
 [위젯 라이브러리](https://thlee.github.io/deskdeck/widgets.html) · [Widgets (English)](https://thlee.github.io/deskdeck/widgets.en.html)
