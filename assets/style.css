@@ -44,3 +44,8 @@
 .deck-capture{position:relative;border:1px solid #3d505c;border-radius:18px;overflow:hidden;background:#080810;box-shadow:0 24px 65px #0005}.deck-capture img{display:block;width:100%;height:auto}
 
 .download-terms{font-size:13px;line-height:1.7;max-width:38rem;margin:10px 0 0}.download-box .download-terms{max-width:25rem}
+
+/* Android reuse guide: keep the homepage focused on PC actions. */
+.reuse-guide-hero{max-width:1200px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center}.reuse-guide-hero h1{font-size:clamp(32px,3.8vw,52px)}.reuse-guide-hero .intro{font-size:18px;line-height:1.8}.reuse-guide-figure{margin:0;min-width:0}.reuse-guide-figure figcaption{font-size:12px;color:var(--muted);line-height:1.7;margin-top:14px}.reuse-connection-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:24px 0}.reuse-connection-grid article{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:22px}.reuse-connection-grid h3{margin:0 0 14px}.reuse-connection-grid p{margin-bottom:0}.reuse-setup{padding-left:24px}.reuse-setup li{padding-left:6px;margin-bottom:24px}.reuse-setup h3{margin:0 0 8px}.reuse-setup p{margin-bottom:0}
+@media(max-width:900px){.reuse-guide-hero{grid-template-columns:1fr;gap:32px}.reuse-guide-figure{max-width:600px}.reuse-guide-hero h1{font-size:clamp(32px,6vw,46px)}}
+@media(max-width:600px){.reuse-connection-grid{grid-template-columns:1fr}.reuse-guide-hero .actions{align-items:flex-start}.reuse-guide-hero .intro{font-size:17px}}

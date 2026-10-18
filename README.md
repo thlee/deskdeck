@@ -15,13 +15,13 @@
 
 ### 오래된 안드로이드 활용 사례
 
-Galaxy S8(Android 9)은 앱 실행·단축키 패널로, LG G Pad 8.0(Android 5.0.2)은 넓은 버튼·위젯 화면으로 활용할 수 있습니다. 주요 작업은 PC의 Studio가 처리하며 휴대폰·태블릿은 같은 앱을 사용합니다. USB 호환성은 기기에 따라 다를 수 있습니다. [활용 예시](https://thlee.github.io/deskdeck/#reuse).
+Galaxy S8(Android 9)은 앱 실행·단축키 패널로, LG G Pad 8.0(Android 5.0.2)은 넓은 버튼·위젯 화면으로 활용할 수 있습니다. 주요 작업은 PC의 Studio가 처리하며 휴대폰·태블릿은 같은 앱을 사용합니다. USB 호환성은 기기에 따라 다를 수 있습니다. [안 쓰는 스마트폰·구형 태블릿 활용 안내](https://thlee.github.io/deskdeck/reuse-android.html).
 
 ## Everyday tasks, one touch away
 
 Turn a phone, tablet, second monitor or ESP32 display into your own PC control panel. Launch apps, use shortcuts, combine actions into macros, control media, and customize your screen with themes and full-screen widgets.
 
-**Reuse hardware you already own:** Android 5.0+ support gives older phones and tablets a useful role, including devices past manufacturer update support. Use a Galaxy S8 (Android 9) for apps and shortcuts, or an LG G Pad 8.0 (Android 5.0.2) for a larger button and widget screen. USB compatibility varies by device. [Device examples](https://thlee.github.io/deskdeck/index.en.html#reuse).
+**Reuse hardware you already own:** Android 5.0+ support gives older phones and tablets a useful role, including devices past manufacturer update support. Use a Galaxy S8 (Android 9) for apps and shortcuts, or an LG G Pad 8.0 (Android 5.0.2) for a larger button and widget screen. USB compatibility varies by device. [Repurpose an old Android phone as a PC macro pad](https://thlee.github.io/deskdeck/reuse-android.en.html).
 
 ## 위젯 다운로드
 [위젯 라이브러리](https://thlee.github.io/deskdeck/widgets.html) · [Widgets (English)](https://thlee.github.io/deskdeck/widgets.en.html)
@@ -31,7 +31,7 @@ Turn a phone, tablet, second monitor or ESP32 display into your own PC control p
 ## 테마 다운로드
 [테마 라이브러리](https://thlee.github.io/deskdeck/themes.html) · [Themes (English)](https://thlee.github.io/deskdeck/themes.en.html)
 
-안개 숲·고요한 바다·데키 — 민트 도우미 테마를 내려받아 **보기 → 테마** 창에 ZIP을 끌어다 놓고 적용하세요. 배경 이미지와 버튼 색상을 함께 바꾸며 기존 버튼·매크로 설정은 유지됩니다.
+안개 숲·고요한 바다·농촌·데키 — 민트 도우미 테마를 내려받아 **보기 → 테마** 창에 ZIP을 끌어다 놓고 적용하세요. 배경 이미지와 버튼 색상을 함께 바꾸며 기존 버튼·매크로 설정은 유지됩니다.
 
 ## 현재 배포
 - DeskDeck Studio **0.9.32**, Windows 10 1809+ / Windows 11, x64.
