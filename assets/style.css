@@ -26,3 +26,11 @@
 /* Reuse story and physically checked devices. */
 .reuse-section{background:linear-gradient(140deg,#102720,#0b151a 70%)}.reuse-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.reuse-card{padding:30px;border:1px solid #36554d;border-radius:22px;background:#122229}.reuse-card h3{margin:20px 0 8px}.reuse-card p{color:var(--muted);margin-bottom:0}.reuse-card .reuse-os{color:var(--mint);font-size:14px;margin-bottom:16px}.reuse-note{color:var(--muted);font-size:13px;margin:22px 0}.reuse-section .actions>.muted{font-size:13px}
 @media(max-width:760px){.reuse-grid{grid-template-columns:1fr}.reuse-card{padding:24px}}
+
+
+/* Included widgets first, scalable external-widget catalog. */
+.widget-jumps{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.widget-jumps a{border:1px solid #35544c;border-radius:999px;padding:7px 15px;color:var(--mint);text-decoration:none}.widget-jumps a:hover{background:#203a34}
+.widget-builtins-first{padding-top:32px;padding-bottom:48px}.widget-builtins-first .builtin-list{grid-template-columns:repeat(4,minmax(0,1fr))}
+.widget-extras{padding-top:44px;padding-bottom:30px;border-top:1px solid var(--line)}.widget-category{padding-top:24px}.widget-category>h3{font-size:24px;margin-bottom:22px}.widget-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.widget-catalog .widget-card{display:flex;flex-direction:column;align-items:stretch;gap:24px;padding:26px;margin:0}.widget-catalog .widget-info{display:flex;flex-direction:column;flex:1}.widget-catalog .widget-info>h3{font-size:26px;margin:0 0 14px}.widget-catalog .widget-info>.actions{margin-top:auto;padding-top:12px}.widget-catalog .widget-screen{box-shadow:none}.widget-install>.widget-meta{color:var(--muted);font-size:14px}
+@media(max-width:900px){.widget-builtins-first .builtin-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.widget-catalog{grid-template-columns:1fr}.widget-catalog .widget-card{padding:20px}.widget-builtins-first .builtin-list{grid-template-columns:1fr}.widget-jumps{font-size:13px}}

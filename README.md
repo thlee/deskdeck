@@ -26,7 +26,7 @@ Turn a phone, tablet, second monitor or ESP32 display into your own PC control p
 ## 위젯 다운로드
 [위젯 라이브러리](https://thlee.github.io/deskdeck/widgets.html) · [Widgets (English)](https://thlee.github.io/deskdeck/widgets.en.html)
 
-코인 시세·뉴스·오델로 ZIP을 다운로드하고 Studio의 전체화면 → 위젯 관리 목록에 끌어다 놓으세요. 기본 시계·네코·미디어는 별도 다운로드 없이 사용합니다.
+기본 시계·네코·미디어·시스템 정보·동영상은 Studio에서 바로 선택합니다. 추가 위젯은 정보(코인 시세·뉴스), 게임(오델로), 휴식(모닥불·어항)으로 나누어 제공합니다. ZIP을 다운로드하고 **전체화면 → 위젯 관리** 목록에 끌어다 놓으세요. 업데이트할 때는 기존 위젯을 삭제하지 않고 새 ZIP을 추가하면 설정을 유지합니다. 모닥불·어항은 MIT 라이선스와 원저작자 고지를 ZIP에 포함합니다.
 
 ## 테마 다운로드
 [테마 라이브러리](https://thlee.github.io/deskdeck/themes.html) · [Themes (English)](https://thlee.github.io/deskdeck/themes.en.html)

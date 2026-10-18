@@ -1,3 +1,5 @@
-60c530e41e30003274f302a650a11f28a52429f1f069894e5410c311a5f6eae6  deskdeck.upbit-1.0.0.deskdeck-widget.zip
-b6766806d3989e7aa09584de823399673afa6fdf39593988341ef06b308dfcb3  deskdeck.news-1.0.1.deskdeck-widget.zip
+af59fb95ad5298afc00a8f7046f7c35493429e0dc6659cb76a960897e61dcc4d  deskdeck.upbit-1.0.1.deskdeck-widget.zip
+5ed8785372706c7784e16d0da157b85b9506257c28232224a6e7c8eb04502ec5  deskdeck.news-1.0.2.deskdeck-widget.zip
 4ffca93204dfcd132d7b8b9aa4da9a399f31acd2a15121af3a996f68b155fddf  deskdeck.othello-1.0.0.deskdeck-widget.zip
+6b1f889347658ad8b578dcbce91bcfd82722a425ece0e2ec9c174b436d4730f8  deskdeck.campfire-1.0.0.deskdeck-widget.zip
+8bc51dc6b40e303342159bc125ecb4db57f9f40beff0947f9aa9e1036582c02c  deskdeck.aquarium-1.0.0.deskdeck-widget.zip

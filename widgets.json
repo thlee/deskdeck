@@ -4,8 +4,8 @@
     {
       "id": "deskdeck.upbit",
       "package": "deskdeck.upbit.deskdeck-widget.zip",
-      "minStudio": "0.8.18",
-      "published": "2026-10-13",
+      "minStudio": "0.9.6",
+      "published": "2026-10-18",
       "name": {
         "ko": "코인 시세",
         "en": "Coin prices"
@@ -18,12 +18,14 @@
         "ko": [
           "코인 1~10개 선택·순서 변경",
           "10초·30초·60초 갱신 간격",
-          "한국어·영어·일본어·중국어 지원"
+          "한국어·영어·일본어·중국어 지원",
+          "테마 배경 지원"
         ],
         "en": [
           "Choose and reorder 1–10 coins",
           "Refresh every 10, 30 or 60 seconds",
-          "Korean, English, Japanese and Chinese"
+          "Korean, English, Japanese and Chinese",
+          "Theme background support"
         ]
       },
       "preview": {
@@ -33,16 +35,17 @@
       "network": [
         "api.upbit.com"
       ],
-      "version": "1.0.0",
-      "url": "downloads/widgets/deskdeck.upbit-1.0.0.deskdeck-widget.zip",
-      "sha256": "60c530e41e30003274f302a650a11f28a52429f1f069894e5410c311a5f6eae6",
-      "size": 5756
+      "category": "information",
+      "version": "1.0.1",
+      "url": "downloads/widgets/deskdeck.upbit-1.0.1.deskdeck-widget.zip",
+      "sha256": "af59fb95ad5298afc00a8f7046f7c35493429e0dc6659cb76a960897e61dcc4d",
+      "size": 5803
     },
     {
       "id": "deskdeck.news",
       "package": "deskdeck.news.deskdeck-widget.zip",
-      "minStudio": "0.8.19",
-      "published": "2026-10-13",
+      "minStudio": "0.9.6",
+      "published": "2026-10-18",
       "name": {
         "ko": "뉴스",
         "en": "News"
@@ -55,12 +58,12 @@
         "ko": [
           "공개 HTTPS 피드 최대 8개",
           "5·15·30분 갱신, 제목 자동·수동 전환",
-          "Studio 0.8.19 이상 필요 · 별도 ZIP 설치"
+          "테마 배경 지원 · 제목을 눌러 원문 열기"
         ],
         "en": [
           "Up to 8 public HTTPS feeds",
           "5/15/30-minute refresh; automatic or manual headlines",
-          "Requires Studio 0.8.19+ · Separate ZIP installation"
+          "Theme backgrounds; tap a headline to open the original"
         ]
       },
       "preview": {
@@ -73,13 +76,14 @@
         "en": "NASA and user-configured public RSS/Atom providers"
       },
       "updateNote": {
-        "ko": "Studio 0.8.26에는 피드 편집·여러 뉴스 표시 개선이 포함됩니다. ESP32의 기기 내 스크롤은 호환 펌웨어가 필요하며 Studio 설치와 기기 펌웨어 업데이트는 별도입니다.",
-        "en": "Studio 0.8.26 includes feed editing and multi-headline improvements. Local scrolling on ESP32 requires compatible firmware; updating Studio does not automatically update board firmware."
+        "ko": "Studio 0.9.31 사용을 권장합니다. ZIP 업데이트는 기존 피드 설정을 유지합니다.",
+        "en": "Studio 0.9.31 is recommended. Updating the ZIP keeps your saved feeds."
       },
-      "version": "1.0.1",
-      "url": "downloads/widgets/deskdeck.news-1.0.1.deskdeck-widget.zip",
-      "sha256": "b6766806d3989e7aa09584de823399673afa6fdf39593988341ef06b308dfcb3",
-      "size": 2692
+      "category": "information",
+      "version": "1.0.2",
+      "url": "downloads/widgets/deskdeck.news-1.0.2.deskdeck-widget.zip",
+      "sha256": "5ed8785372706c7784e16d0da157b85b9506257c28232224a6e7c8eb04502ec5",
+      "size": 2754
     },
     {
       "id": "deskdeck.othello",
@@ -120,14 +124,111 @@
         "ko": "없음 — Studio에서 오프라인 실행",
         "en": "None — runs offline in Studio"
       },
-      "updateNote": {
-        "ko": "Studio 0.8.26 이상이 필요합니다. ZIP 추가 후 위젯 관리에서 사용을 켜고 저장하세요. 대국은 Studio를 종료하면 초기화됩니다.",
-        "en": "Requires Studio 0.8.26 or later. Enable the widget and save in Manage widgets after importing the ZIP. Games reset when Studio exits."
-      },
+      "category": "games",
       "version": "1.0.0",
       "url": "downloads/widgets/deskdeck.othello-1.0.0.deskdeck-widget.zip",
       "sha256": "4ffca93204dfcd132d7b8b9aa4da9a399f31acd2a15121af3a996f68b155fddf",
       "size": 6475
+    },
+    {
+      "id": "deskdeck.campfire",
+      "package": "deskdeck.campfire.deskdeck-widget.zip",
+      "minStudio": "0.9.11",
+      "published": "2026-10-18",
+      "name": {
+        "ko": "모닥불",
+        "en": "Campfire"
+      },
+      "description": {
+        "ko": "장작 위로 흔들리는 불꽃과 날아오르는 불씨를 바라보며 잠깐 쉬어 가세요.",
+        "en": "Take a quiet break with flickering flames, glowing logs and floating embers."
+      },
+      "features": {
+        "ko": [
+          "불꽃 세기·장면 밝기·불씨 설정",
+          "작은 시계 표시 선택",
+          "화면 가운데 터치로 버튼 화면 복귀"
+        ],
+        "en": [
+          "Adjust flame intensity, scene brightness and embers",
+          "Optional small clock",
+          "Tap the center to return to your buttons"
+        ]
+      },
+      "preview": {
+        "ko": "campfire.ko.png",
+        "en": "campfire.en.png"
+      },
+      "previewCaption": {
+        "ko": "위젯의 실제 장면을 캡처한 이미지입니다.",
+        "en": "Captured from the widget’s rendered scene."
+      },
+      "network": [],
+      "offline": true,
+      "networkLabel": {
+        "ko": "없음 — 인터넷 없이 실행",
+        "en": "None — runs offline"
+      },
+      "category": "relax",
+      "license": "MIT",
+      "updateNote": {
+        "ko": "소리 없이 동작하며 Studio 연결이 필요합니다.",
+        "en": "Silent animation; requires a connection to Studio."
+      },
+      "version": "1.0.0",
+      "url": "downloads/widgets/deskdeck.campfire-1.0.0.deskdeck-widget.zip",
+      "sha256": "6b1f889347658ad8b578dcbce91bcfd82722a425ece0e2ec9c174b436d4730f8",
+      "size": 9217
+    },
+    {
+      "id": "deskdeck.aquarium",
+      "package": "deskdeck.aquarium.deskdeck-widget.zip",
+      "minStudio": "0.9.11",
+      "published": "2026-10-18",
+      "name": {
+        "ko": "어항",
+        "en": "Aquarium"
+      },
+      "description": {
+        "ko": "물고기와 수초가 움직이는 작은 어항입니다. 물속을 터치하면 물고기가 먹이를 따라옵니다.",
+        "en": "A small aquarium with swimming fish and swaying plants. Tap the water and watch fish follow the food."
+      },
+      "features": {
+        "ko": [
+          "물고기 3·5·7마리와 헤엄 속도 선택",
+          "낮·밤 조명과 물방울 설정",
+          "터치로 먹이 주기"
+        ],
+        "en": [
+          "Choose 3, 5 or 7 fish and their swimming speed",
+          "Day/night lighting and bubbles",
+          "Tap to feed the fish"
+        ]
+      },
+      "preview": {
+        "ko": "aquarium.ko.png",
+        "en": "aquarium.en.png"
+      },
+      "previewCaption": {
+        "ko": "위젯의 실제 장면을 캡처한 이미지입니다.",
+        "en": "Captured from the widget’s rendered scene."
+      },
+      "network": [],
+      "offline": true,
+      "networkLabel": {
+        "ko": "없음 — 인터넷 없이 실행",
+        "en": "None — runs offline"
+      },
+      "category": "relax",
+      "license": "MIT",
+      "updateNote": {
+        "ko": "소리 없이 동작하며 Studio 연결이 필요합니다.",
+        "en": "Silent animation; requires a connection to Studio."
+      },
+      "version": "1.0.0",
+      "url": "downloads/widgets/deskdeck.aquarium-1.0.0.deskdeck-widget.zip",
+      "sha256": "8bc51dc6b40e303342159bc125ecb4db57f9f40beff0947f9aa9e1036582c02c",
+      "size": 10529
     }
   ]
 }
