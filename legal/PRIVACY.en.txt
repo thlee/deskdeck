@@ -1,5 +1,5 @@
 DeskDeck public free evaluation privacy and communication notice
-Version: 2026-10-13 · Provider: 이태호 · Contact: deskdeck.app@gmail.com
+Version: 2026-10-18 · Provider: 이태호 · Contact: deskdeck.app@gmail.com
 
 Local storage
 Installed Studio keeps settings under %LOCALAPPDATA%\DeskDeck; program files are under %LOCALAPPDATA%\Programs\DeskDeck. An explicitly selected data directory overrides the settings location. Local data includes buttons, executable paths, shortcuts/macros, paired devices, window size, selected city, weather cache and diagnostic logs. Macro text is encrypted with Windows user-scoped DPAPI and decrypted for editing/execution. This is not a password-manager guarantee against malware running as the same user.
@@ -30,3 +30,13 @@ Exit Studio and uninstall using Windows Apps. To remove settings, carefully dele
 
 Optional idle screen advertisements
 Disabled by default. When enabled and a supported ESP32 or Android device is connected, DeskDeck downloads an ad catalog and static images from its official website. No user identifiers, usage history, impression reports or click reports are sent. GitHub, the hosting provider, may process connection information such as the requesting IP address. Ad images are held temporarily in PC and device memory; links never open automatically. You can turn this feature off at any time. The bundled DeskDeck introduction is shown when no downloaded ad is available or valid.
+
+
+Manual media library
+Manually registered links, local file paths, names, favorites and recent DeskDeck open-request times are stored in the PC profile and included in profile exports. Browser playback is not automatically collected; tabs and pages are not inspected for media registration. OS now-playing metadata is still used for current-track display and media controls. Legacy automatic records remain in the profile but are hidden unless explicitly pinned. Existing buttons remain intact. The media library is not sent to the provider.
+
+When you explicitly add a URL with a blank name, Studio requests that URL from the service to retrieve its media title. It does not use browser login cookies or account credentials and does not execute page scripts. The service may process ordinary request information such as your IP address. If no title is available, Studio uses a name derived from the provider and address.
+
+Themes, media artwork and video
+User-selected theme images and videos may be stored in the PC profile/cache and transferred to supported Android devices for reuse in app-internal storage. They are not uploaded to the provider. Clearing a video selection removes the setting reference; it does not delete the original video or existing cached files.
+Retrieving media artwork requests the media service or image host. That service may process normal request information such as your IP address, and retrieved images are cached on the PC. Additional widgets may contact their own external services; consult the widget's notice.

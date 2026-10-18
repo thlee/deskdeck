@@ -33,8 +33,8 @@ Samsung’s linked SM-G950F history records the Android 9 upgrade in **2019**, w
 코인 시세·뉴스·오델로 ZIP을 다운로드하고 Studio의 전체화면 → 위젯 관리 목록에 끌어다 놓으세요. 기본 시계·네코·미디어는 별도 다운로드 없이 사용합니다.
 
 ## 현재 배포
-- DeskDeck Studio **0.8.26**, Windows 10 1809+ / Windows 11, x64.
-- Android **0.5.34**, Android 5.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
+- DeskDeck Studio **0.9.31**, Windows 10 1809+ / Windows 11, x64.
+- Android **0.5.44**, Android 5.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
 - JC3248W535 ESP32-S3 펌웨어 **0.8.1**. USB·Wi-Fi 및 초기 설치/백업 안내.
 - 가상 DeskDeck: 별도 장치 없이 마우스나 작은 터치·보조 모니터로 사용할 수 있습니다.
 - 현재 공개 버전은 무료·기간 제한 없음. 결제·계정 등록 없음. Mac/iPhone 설치파일은 제공하지 않습니다.
