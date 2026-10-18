@@ -23,6 +23,17 @@
       "sha256": "aa40eb11072b2d358b6a510f6ccca8a0875fa64d5f3a39c9695b58a9ddfb09be"
     },
     {
+      "id": "deskdeck.countryside",
+      "name": {
+        "ko": "농촌",
+        "en": "Countryside"
+      },
+      "download": "downloads/themes/DeskDeck-Countryside.theme.zip",
+      "preview": "assets/themes/countryside.png",
+      "bytes": 2873338,
+      "sha256": "b72b95020eb4844a5919d40161227afaa30bbe3a67f572e88602d16fa33952da"
+    },
+    {
       "id": "deskdeck.deki-mint",
       "name": {
         "ko": "데키 — 민트 도우미",
