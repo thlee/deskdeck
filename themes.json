@@ -34,6 +34,17 @@
       "sha256": "b72b95020eb4844a5919d40161227afaa30bbe3a67f572e88602d16fa33952da"
     },
     {
+      "id": "deskdeck.momo-mint",
+      "name": {
+        "ko": "모모 — 작은 도우미",
+        "en": "Momo — Little Helper"
+      },
+      "download": "downloads/themes/DeskDeck-Momo-Mint.theme.zip",
+      "preview": "assets/themes/momo-mint.png",
+      "bytes": 1798916,
+      "sha256": "a7e28b1ce429e392d411b5b129286f56c07d40e7a69b6a0e2c5bc3242b23e70b"
+    },
+    {
       "id": "deskdeck.deki-mint",
       "name": {
         "ko": "데키 — 민트 도우미",
