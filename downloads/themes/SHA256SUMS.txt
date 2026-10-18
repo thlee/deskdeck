@@ -1,1 +1,3 @@
+d84b2b037d421cad935f67975a092cb569c9ccf15f301eeb99d1861c8f3bfc21  DeskDeck-Misty-Forest.theme.zip
+aa40eb11072b2d358b6a510f6ccca8a0875fa64d5f3a39c9695b58a9ddfb09be  DeskDeck-Quiet-Ocean.theme.zip
 acefc0c96100e1c8d5782c676275106f48d6f6dd61be7887fa9e8e022a19cb92  DeskDeck-Deki-Mint.theme.zip

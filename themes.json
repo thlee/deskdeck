@@ -1,6 +1,28 @@
 {
   "themes": [
     {
+      "id": "deskdeck.misty-forest",
+      "name": {
+        "ko": "안개 숲",
+        "en": "Misty Forest"
+      },
+      "download": "downloads/themes/DeskDeck-Misty-Forest.theme.zip",
+      "preview": "assets/themes/misty-forest.png",
+      "bytes": 2031699,
+      "sha256": "d84b2b037d421cad935f67975a092cb569c9ccf15f301eeb99d1861c8f3bfc21"
+    },
+    {
+      "id": "deskdeck.quiet-ocean",
+      "name": {
+        "ko": "고요한 바다",
+        "en": "Quiet Ocean"
+      },
+      "download": "downloads/themes/DeskDeck-Quiet-Ocean.theme.zip",
+      "preview": "assets/themes/quiet-ocean.png",
+      "bytes": 1879962,
+      "sha256": "aa40eb11072b2d358b6a510f6ccca8a0875fa64d5f3a39c9695b58a9ddfb09be"
+    },
+    {
       "id": "deskdeck.deki-mint",
       "name": {
         "ko": "데키 — 민트 도우미",
