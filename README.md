@@ -1,6 +1,6 @@
-# DeskDeck
+# 바로함
 
-<img src="assets/logo.svg" width="64" alt="DeskDeck">
+<img src="assets/logo.svg" width="64" alt="바로함">
 
 자주 하는 일, 한 번의 터치로. 휴대폰·보조 모니터·ESP32 화면을 PC의 앱 실행·단축키·매크로 패널로 사용하세요.
 
@@ -34,10 +34,10 @@ Turn a phone, tablet, second monitor or ESP32 display into your own PC control p
 안개 숲·고요한 바다·농촌·모모 — 작은 도우미·데키 — 민트 도우미 테마를 내려받아 **보기 → 테마** 창에 ZIP을 끌어다 놓고 적용하세요. 배경 이미지와 버튼 색상을 함께 바꾸며 기존 버튼·매크로 설정은 유지됩니다.
 
 ## 현재 배포
-- DeskDeck Studio **0.9.32**, Windows 10 1809+ / Windows 11, x64.
-- Android **0.5.44**, Android 5.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
-- JC3248W535 ESP32-S3 펌웨어 **0.8.1**. USB·Wi-Fi 및 초기 설치/백업 안내.
-- 가상 DeskDeck: 별도 장치 없이 마우스나 작은 터치·보조 모니터로 사용할 수 있습니다.
+- 바로함 Studio **0.9.39**, Windows 10 1809+ / Windows 11, x64.
+- Android **0.5.55**, Android 5.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
+- JC3248W535 ESP32-S3 펌웨어 **0.8.2**. USB·Wi-Fi 및 초기 설치/백업 안내.
+- 가상 바로함: 별도 장치 없이 마우스나 작은 터치·보조 모니터로 사용할 수 있습니다.
 - 현재 공개 버전은 무료·기간 제한 없음. 결제·계정 등록 없음. Mac/iPhone 설치파일은 제공하지 않습니다.
 
 ## 다운로드 전에
@@ -53,6 +53,9 @@ Windows 설치파일은 아직 Authenticode 서명이 없어 게시자 경고가
 GitHub가 자동으로 표시하는 “Source code (zip/tar.gz)”에는 **이 소개 사이트의 파일만** 들어 있습니다. 오픈소스 대응 자료는 별도 Sources ZIP을 선택하세요.
 
 ## 문의
-[문제 제보](https://github.com/thlee/deskdeck/issues) · DeskDeck · deskdeck.app@gmail.com
+[문제 제보](https://github.com/thlee/deskdeck/issues) · 바로함 · deskdeck.app@gmail.com
 
 버전, 연결 방법, 재현 순서, 오류 문구를 알려 주세요. 비밀번호·개인 설정·기기 전체 백업을 공개 이슈에 올리지 마세요. 보안 문제는 이메일로 알려 주세요.
+
+- Android 터치패드: Wi-Fi·USB로 포인터 이동, 클릭, 드래그와 스크롤을 지원합니다.
+- Android touchpad: pointer movement, clicks, dragging and scrolling over Wi-Fi or USB.

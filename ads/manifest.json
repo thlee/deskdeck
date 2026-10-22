@@ -3,10 +3,10 @@
   "ads": [
     {
       "asset": "deskdeck-house-v1.rgb565",
-      "sha256": "3d0940f8f9900836cac56ea23d4bf17191f0f9d71991db3cead4afaa20271021",
+      "sha256": "606530cb040dfc06140a41582c8c8983b6f82d3f4c722cf2f7d232c51dadf9c0",
       "from": "2026-10-13T00:00:00Z",
       "until": "2030-01-01T00:00:00Z",
-      "sponsor": "DeskDeck"
+      "sponsor": "Baroham"
     }
   ]
 }

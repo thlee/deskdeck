@@ -1,8 +1,11 @@
-DeskDeck public free evaluation privacy and communication notice
+Baroham public free evaluation privacy and communication notice
 Version: 2026-10-18 · Provider: 이태호 · Contact: deskdeck.app@gmail.com
 
 Local storage
 Installed Studio keeps settings under %LOCALAPPDATA%\DeskDeck; program files are under %LOCALAPPDATA%\Programs\DeskDeck. An explicitly selected data directory overrides the settings location. Local data includes buttons, executable paths, shortcuts/macros, paired devices, window size, selected city, weather cache and diagnostic logs. Macro text is encrypted with Windows user-scoped DPAPI and decrypted for editing/execution. This is not a password-manager guarantee against malware running as the same user.
+
+Optional macro recording
+Keyboard input and shortcuts are collected locally only while the user starts a recording. Enabling the separate text-capture option can also record editable text exposed by accessibility APIs. Password fields are excluded; captured strings are encrypted like other macro text. They are not sent to the provider. Review the captured steps before saving.
 
 Device communication
 Studio exchanges its rendered deck/widget images, action identifiers and touch input with registered devices. It does not broadcast the entire PC desktop. Wi-Fi uses local discovery and pairing; the phone wireless connection uses TLS. AOA uses USB. A registered device can trigger configured PC actions; do not share pairing credentials. ESP32 Wi-Fi settings and full flash backups can contain passwords. Backups stay in the user-selected location and must not be sent as support attachments.
@@ -19,7 +22,7 @@ Android distribution and optional USB driver
 QR/browser APK installation uses a temporary local HTTP download page. Other parties able to reach the page on the network may download the APK. Use a trusted network and close the install window afterwards. Android controls app installation; the public release APK disables debugging and retains the previous signing certificate identity for in-place updates. It is not an app-store release. UsbDk for AOA is a separate optional installation, not bundled or silently installed. ADB/debugging tools are excluded.
 
 Permissions and support
-Normal setup and basic use do not require administrator rights. Firewall changes and the optional driver can require separate elevation. Sign-in startup can be changed in General settings. Exit from the tray to stop Studio communication/input processing. DeskDeck does not automatically upload account, usage or crash information to its provider. Only email/material you choose to send reaches the provider. Logs can contain paths and error messages; review them before sharing.
+Normal setup and basic use do not require administrator rights. Firewall changes and the optional driver can require separate elevation. Sign-in startup can be changed in General settings. Exit from the tray to stop Studio communication/input processing. Baroham does not automatically upload account, usage or crash information to its provider. Only email/material you choose to send reaches the provider. Logs can contain paths and error messages; review them before sharing.
 
 Public website and downloads
 The site and downloads are hosted by GitHub Pages and GitHub Releases. GitHub may process IP addresses and service-operation data under its own privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement . The introduction site includes no separate advertising, visitor analytics or donation payments. Public GitHub issues are visible to everyone; do not post personal data or passwords.
@@ -29,11 +32,11 @@ Exit Studio and uninstall using Windows Apps. To remove settings, carefully dele
 
 
 Optional idle screen advertisements
-Disabled by default. When enabled and a supported ESP32 or Android device is connected, DeskDeck downloads an ad catalog and static images from its official website. No user identifiers, usage history, impression reports or click reports are sent. GitHub, the hosting provider, may process connection information such as the requesting IP address. Ad images are held temporarily in PC and device memory; links never open automatically. You can turn this feature off at any time. The bundled DeskDeck introduction is shown when no downloaded ad is available or valid.
+Disabled by default. When enabled and a supported ESP32 or Android device is connected, Baroham downloads an ad catalog and static images from its official website. No user identifiers, usage history, impression reports or click reports are sent. GitHub, the hosting provider, may process connection information such as the requesting IP address. Ad images are held temporarily in PC and device memory; links never open automatically. You can turn this feature off at any time. The bundled Baroham introduction is shown when no downloaded ad is available or valid.
 
 
 Manual media library
-Manually registered links, local file paths, names, favorites and recent DeskDeck open-request times are stored in the PC profile and included in profile exports. Browser playback is not automatically collected; tabs and pages are not inspected for media registration. OS now-playing metadata is still used for current-track display and media controls. Legacy automatic records remain in the profile but are hidden unless explicitly pinned. Existing buttons remain intact. The media library is not sent to the provider.
+Manually registered links, local file paths, names, favorites and recent Baroham open-request times are stored in the PC profile and included in profile exports. Browser playback is not automatically collected; tabs and pages are not inspected for media registration. OS now-playing metadata is still used for current-track display and media controls. Legacy automatic records remain in the profile but are hidden unless explicitly pinned. Existing buttons remain intact. The media library is not sent to the provider.
 
 When you explicitly add a URL with a blank name, Studio requests that URL from the service to retrieve its media title. It does not use browser login cookies or account credentials and does not execute page scripts. The service may process ordinary request information such as your IP address. If no title is available, Studio uses a name derived from the provider and address.
 
