@@ -26,7 +26,7 @@ Turn a phone, tablet, second monitor or ESP32 display into your own PC control p
 ## 위젯 다운로드
 [위젯 라이브러리](https://thlee.github.io/deskdeck/widgets.html) · [Widgets (English)](https://thlee.github.io/deskdeck/widgets.en.html)
 
-기본 시계·네코·미디어·시스템 정보·동영상은 Studio에서 바로 선택합니다. 추가 위젯은 정보(코인 시세·뉴스), 게임(오델로), 휴식(모닥불·어항·사진 슬라이드쇼·바루와 하미)으로 나누어 제공합니다. ZIP을 다운로드하고 **전체화면 → 위젯 관리** 목록에 끌어다 놓으세요. 업데이트할 때는 기존 위젯을 삭제하지 않고 새 ZIP을 추가하면 설정을 유지합니다. 사진 슬라이드쇼와 바루와 하미는 Studio 0.9.40 이상이 필요합니다. 모닥불·어항·바루와 하미는 MIT 라이선스와 출처 고지를 ZIP에 포함합니다.
+기본 시계·네코·미디어·시스템 정보·동영상은 Studio에서 바로 선택합니다. 추가 위젯은 정보(코인 시세·뉴스), 게임(오델로), 휴식(모닥불·어항·사진 슬라이드쇼)으로 나누어 제공합니다. ZIP을 다운로드하고 **전체화면 → 위젯 관리** 목록에 끌어다 놓으세요. 업데이트할 때는 기존 위젯을 삭제하지 않고 새 ZIP을 추가하면 설정을 유지합니다. 사진 슬라이드쇼는 Studio 0.9.40 이상이 필요합니다. 모닥불·어항는 MIT 라이선스와 출처 고지를 ZIP에 포함합니다.
 
 ## 테마 다운로드
 [테마 라이브러리](https://thlee.github.io/deskdeck/themes.html) · [Themes (English)](https://thlee.github.io/deskdeck/themes.en.html)
@@ -60,4 +60,4 @@ GitHub가 자동으로 표시하는 “Source code (zip/tar.gz)”에는 **이 �
 - Android 터치패드: Wi-Fi·USB로 포인터 이동, 클릭, 드래그와 스크롤을 지원합니다.
 - Android touchpad: pointer movement, clicks, dragging and scrolling over Wi-Fi or USB.
 
-New in the widget library: **Photo Slideshow 1.2.0** and **Baru & Hami 1.3.0**, both requiring Studio 0.9.40+. Download their ZIPs separately; existing settings are preserved.
+New in the widget library: **Photo Slideshow 1.2.0**, requiring Studio 0.9.40+. Download its ZIP separately; existing settings are preserved.

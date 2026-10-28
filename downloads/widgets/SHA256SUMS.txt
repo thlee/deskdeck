@@ -4,4 +4,3 @@ af59fb95ad5298afc00a8f7046f7c35493429e0dc6659cb76a960897e61dcc4d  deskdeck.upbit
 6b1f889347658ad8b578dcbce91bcfd82722a425ece0e2ec9c174b436d4730f8  deskdeck.campfire-1.0.0.deskdeck-widget.zip
 8bc51dc6b40e303342159bc125ecb4db57f9f40beff0947f9aa9e1036582c02c  deskdeck.aquarium-1.0.0.deskdeck-widget.zip
 1f1e2bbc20e161709fc273941b3de4bf248f3175798ddcccd4879e1f3e6af02f  deskdeck.slideshow-1.2.0.deskdeck-widget.zip
-204cde49496d9c4674a6dd03393fd976bc6ab207b4d468239801ebcbcc6aeab5  baroham.walk-1.3.0.deskdeck-widget.zip
