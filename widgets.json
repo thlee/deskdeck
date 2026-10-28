@@ -229,6 +229,110 @@
       "url": "downloads/widgets/deskdeck.aquarium-1.0.0.deskdeck-widget.zip",
       "sha256": "8bc51dc6b40e303342159bc125ecb4db57f9f40beff0947f9aa9e1036582c02c",
       "size": 10529
+    },
+    {
+      "id": "deskdeck.slideshow",
+      "package": "deskdeck.slideshow.deskdeck-widget.zip",
+      "minStudio": "0.9.40",
+      "published": "2026-10-28",
+      "name": {
+        "ko": "사진 슬라이드쇼",
+        "en": "Photo slideshow"
+      },
+      "description": {
+        "ko": "좋아하는 사진을 책상 위 작은 액자로 띄워 보세요. 사진 폴더를 추가하면 하위 폴더까지 찾아 순서대로 또는 무작위로 보여줍니다.",
+        "en": "Turn your spare screen into a photo frame. Add folders and play their photos, including subfolders, in order or shuffled."
+      },
+      "features": {
+        "ko": [
+          "사진 폴더 끌어다 놓기 · 폴더별 사용 여부와 순서 설정",
+          "사진당 3~300초 · 순차·무작위 재생",
+          "사진 비율 유지 · 폴더가 없으면 설치된 테마 배경 사용",
+          "선택한 사진을 읽기만 하며 원본 수정·삭제·업로드 없음"
+        ],
+        "en": [
+          "Drop folders; enable and reorder each source",
+          "3–300 seconds per photo; sequential or shuffled playback",
+          "Preserves aspect ratio; uses installed theme backgrounds when no folders are added",
+          "Read-only access: no editing, deletion or upload of your photos"
+        ]
+      },
+      "preview": {
+        "ko": "slideshow.ko.png",
+        "en": "slideshow.en.png"
+      },
+      "previewCaption": {
+        "ko": "예시 이미지로 재생한 실제 슬라이드쇼 화면입니다.",
+        "en": "Actual slideshow rendering with a sample image."
+      },
+      "network": [],
+      "offline": true,
+      "networkLabel": {
+        "ko": "없음 — 선택한 로컬 사진만 읽기",
+        "en": "None — read-only local photos"
+      },
+      "category": "relax",
+      "updateNote": {
+        "ko": "먼저 Studio 0.9.40 이상으로 업데이트하세요. 기존 폴더와 재생 설정은 유지합니다.",
+        "en": "Update Studio to 0.9.40 or later first. Existing folders and playback settings are preserved."
+      },
+      "version": "1.2.0",
+      "url": "downloads/widgets/deskdeck.slideshow-1.2.0.deskdeck-widget.zip",
+      "sha256": "1f1e2bbc20e161709fc273941b3de4bf248f3175798ddcccd4879e1f3e6af02f",
+      "size": 2693
+    },
+    {
+      "id": "baroham.walk",
+      "package": "baroham.walk.deskdeck-widget.zip",
+      "minStudio": "0.9.40",
+      "published": "2026-10-28",
+      "name": {
+        "ko": "바루와 하미",
+        "en": "Baru & Hami"
+      },
+      "description": {
+        "ko": "바루와 하미가 작은 화면 속 사계절을 산책합니다. 좋아하는 캐릭터와 계절을 고르고, 화면을 터치해 함께 놀아 보세요.",
+        "en": "Let Baru or Hami wander through the seasons on your desk. Pick a companion and season, then tap the screen to guide them."
+      },
+      "features": {
+        "ko": [
+          "바루·하미 2종 캐릭터와 봄·여름·가을·겨울",
+          "걷기·달리기·손 흔들기·앉기·잠들기",
+          "계절 배경·내 테마·단색 배경 선택",
+          "캐릭터 크기·속도 조절 · 인터넷 없이 실행"
+        ],
+        "en": [
+          "Two companions, with spring, summer, autumn and winter outfits",
+          "Walking, running, waving, sitting and sleeping",
+          "Seasonal scenes, your theme or a plain background",
+          "Adjust character size and speed; runs offline"
+        ]
+      },
+      "preview": {
+        "ko": "baroham-walk.ko.png",
+        "en": "baroham-walk.en.png"
+      },
+      "previewCaption": {
+        "ko": "하미의 가을 산책을 실제 위젯에서 캡처했습니다.",
+        "en": "Captured from Hami’s autumn scene in the actual widget."
+      },
+      "network": [],
+      "offline": true,
+      "networkLabel": {
+        "ko": "없음 — 인터넷 없이 실행",
+        "en": "None — runs offline"
+      },
+      "category": "relax",
+      "license": "MIT",
+      "licenseFiles": "LICENSE.txt · SOURCE.txt",
+      "updateNote": {
+        "ko": "이미지 미리보기 개선이 포함된 Studio 0.9.40 이상이 필요합니다. ZIP에는 오리지널 캐릭터 그림과 라이선스가 포함됩니다.",
+        "en": "Requires Studio 0.9.40+ with the image-preview fix. Original character artwork and license are included in the ZIP."
+      },
+      "version": "1.3.0",
+      "url": "downloads/widgets/baroham.walk-1.3.0.deskdeck-widget.zip",
+      "sha256": "204cde49496d9c4674a6dd03393fd976bc6ab207b4d468239801ebcbcc6aeab5",
+      "size": 356021
     }
   ]
 }
