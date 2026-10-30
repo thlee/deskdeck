@@ -1,4 +1,4 @@
-첨부한 Baroham 위젯 API 안내서(API.md)와 Hello 예제를 기준으로 아래 위젯을 만들어 주세요.
+첨부한 Baroham 위젯 API 안내서(API.ko.md)와 Hello 예제를 기준으로 아래 위젯을 만들어 주세요.
 만들 기능: [여기에 기능을 적으세요]
 대상: Windows Studio 0.9.40 이상 / macOS 0.9.40 build148 이상.
 
@@ -8,7 +8,7 @@
 4. 기본은 기존 480×320 좌표입니다. 반응형 요청은 viewport:1 지원 개발본에서만 requires에 canvas/settings/touch/viewport를 선언하고 api.width·height·contentRect로 매 프레임 배치하세요. 터치는 이미 같은 좌표이며 소수일 수 있습니다. 기존 기기 연결은 480×320으로 되돌아갑니다. 상단 뒤로·좌우 이동 영역은 Studio가 관리합니다.
 5. render(api)는 동기식, 700개 이하 그리기 명령, 상태는 32KiB 이하로 유지하세요.
 6. api.active가 false인 미리보기에서 게임 상태를 변경하지 말고, 터치 sequence를 중복 처리하지 마세요.
-7. 테마는 api.useThemeBackground?.()로 요청하고, 설정·한국어/영어 번역·긴 문구를 처리하세요.
+7. 테마는 api.useThemeBackground?.()로 요청하고, 설정·한국어/영어/일본어/중국어 번역·긴 문구를 처리하세요.
 8. 인터넷이 필요할 때만 정확한 HTTPS 호스트를 선언하고 api.httpJson 캐시 결과를 사용하세요. 로딩/실패/인터넷 차단을 고려하고 비밀키를 넣지 마세요.
 9. state는 영구 저장이 아닙니다. 사용자 옵션은 settings.json으로 제공하세요. 기존 ID 업데이트는 버전을 높이고 설정 호환성을 유지하세요.
 10. 결과로 파일 트리, 모든 파일 내용, 루트 구조가 올바른 ZIP, 사용법, 라이선스·출처, 최소 버전 및 검증 체크리스트를 제공하세요.

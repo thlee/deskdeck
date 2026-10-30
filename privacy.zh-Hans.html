@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="把手机、副屏或 ESP32 屏幕变成个人 PC 快捷控制面板。Windows 版 Baroham 免费评估版。"><meta name="theme-color" content="#0b151a"><meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos;; script-src &apos;self&apos;; style-src &apos;self&apos;; img-src &apos;self&apos;; connect-src &apos;none&apos;; object-src &apos;none&apos;; base-uri &apos;self&apos;; form-action &apos;none&apos;"><title>隐私 &amp; 通信 · Baroham</title><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/widget-development.css"><link rel="alternate" hreflang="ko" href="privacy.html"><link rel="alternate" hreflang="en" href="privacy.en.html"><link rel="alternate" hreflang="ja" href="privacy.ja.html"><link rel="alternate" hreflang="zh-Hans" href="privacy.zh-Hans.html"><link rel="canonical" href="https://thlee.github.io/deskdeck/privacy.zh-Hans.html"><script src="assets/docs-languages.js" defer></script></head><body><a class="skip" href="#main">跳转到正文</a><header class="header"><div class="wrap header-inner"><a class="brand" href="index.zh-Hans.html"><img src="assets/logo.svg" alt="" width="34" height="34">Baroham</a><div class="header-actions"><nav class="main-nav" aria-label="主菜单"><a href="index.zh-Hans.html#devices">支持的屏幕</a><a href="start.zh-Hans.html">开始使用</a><a href="widgets.zh-Hans.html">小组件</a><a href="themes.zh-Hans.html">主题</a><a href="index.zh-Hans.html#faq">常见问题</a><a class="nav-download" href="https://github.com/thlee/deskdeck/releases/tag/v0.9.40">下载 ↗</a><a href="developers.zh-Hans.html">开发小组件</a></nav><nav class="language-switch" aria-label="语言"><a href="privacy.html" lang="ko" hreflang="ko">한국어</a><span aria-hidden="true">/</span><a href="privacy.en.html" lang="en" hreflang="en">English</a><span aria-hidden="true">/</span><a href="privacy.ja.html" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><a href="privacy.zh-Hans.html" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">简体中文</a></nav></div></div></header><main id="main"><div class="wrap subhero"><p class="eyebrow">隐私 & 通信</p><h1>隐私 & 通信</h1><p>Baroham 保存的信息及所连接的服务。</p></div><article class="wrap legal-width"><div class="legal-actions"><a href="legal/PRIVACY.en.txt">英文文本</a><a href="legal/PRIVACY.ko.txt" lang="ko">韩文原文</a></div><p class="callout">中文参考译文。请同时参阅韩文和英文原文，第三方许可证原文保持不变。 <a download href="legal/privacy.zh-Hans.txt">TXT</a></p><div class="legal-text">Baroham 公开免费评估版隐私与通信声明
+版本：2026-10-18 · 提供者：이태호 · 联系：deskdeck.app@gmail.com
+
+本地存储
+已安装的 Studio 将设置保存在 %LOCALAPPDATA%\DeskDeck，程序文件位于 %LOCALAPPDATA%\Programs\DeskDeck。明确指定的数据目录会覆盖设置位置。本地数据包括按钮、可执行文件路径、快捷键／宏、配对设备、窗口大小、所选城市、天气缓存和诊断日志。宏文字使用 Windows 用户级 DPAPI 加密，编辑或执行时解密。这并不保证能像密码管理器一样抵御以同一用户身份运行的恶意软件。
+
+可选宏录制
+仅在用户开始录制期间本地采集键盘输入及快捷键。启用独立的文字采集选项后，还可记录辅助功能 API 暴露的可编辑文字。密码字段被排除，采集文字与其他宏文字一样加密，不发送给提供者。保存前请审阅录制步骤。
+
+设备通信
+Studio 与已注册设备交换渲染后的按钮／小组件图像、操作标识及触控输入，不广播整个 PC 桌面。Wi-Fi 使用本地发现和配对，手机无线连接使用 TLS；AOA 使用 USB。已注册设备能触发已配置的 PC 操作，勿分享配对凭据。ESP32 Wi-Fi 设置和完整闪存备份可能包含密码。备份保存在用户指定位置，不应作为支持附件发送。
+
+可选外部服务
+韩国观测地点使用 KMA XML 源，其他坐标地点使用 MET Norway：发送四舍五入到两位小数的经纬度、IP 地址和应用标识。MET Norway 可能在挪威记录 IP 与坐标。响应会缓存。城市名搜索使用附带 GeoNames 目录，不发送给搜索服务。OS 定位遵循 OS 权限，也可手动选城市。获取网站图标会访问该网站。
+
+安装或使用附加小组件会联系其服务商。币价查询 Upbit 公开 API；新闻获取默认 NASA 源或用户配置的公开 RSS/Atom。服务商会收到连接 IP 和常规 HTTP 请求信息。订阅源 URL 和选项保存在本地，规范化标题及链接在内存缓存。点击标题会在 PC 浏览器打开原网站。安装 ZIP 或添加订阅源前请核对来源和使用条款。
+
+Microsoft WebView2
+WebView2 默认使用 Microsoft Defender SmartScreen。SmartScreen 信息及诊断数据可能发送给 Microsoft；Evergreen Runtime 可能接收 Microsoft 更新。若未安装，安装程序会从 Microsoft 下载。请阅读 https://aka.ms/privacy 和 https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy 。
+
+Android 分发与可选 USB 驱动
+二维码／浏览器 APK 安装使用临时本地 HTTP 下载页面，网络中能访问该页面的其他人也可下载 APK。请使用可信网络，完成后关闭安装窗口。安装由 Android 控制；公开 APK 禁用调试，并保留此前签名证书身份以支持原地更新。它不是应用商店版本。AOA 的 UsbDk 为独立可选安装，不捆绑或静默安装，不包含 ADB／调试工具。
+
+权限与支持
+常规安装和基本使用无需管理员权限。防火墙修改和可选驱动可能要求单独提权。登录启动可在常规设置更改。从托盘退出可停止 Studio 通信及输入处理。Baroham 不自动向提供者上传账户、使用或崩溃信息。只有您选择发送的邮件／资料会到达提供者。日志可能含路径及错误信息，分享前请审阅。
+
+官网与下载
+网站及下载由 GitHub Pages 和 GitHub Releases 托管。GitHub 可能依据其隐私政策处理 IP 及服务运行数据：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement 。介绍网站没有额外广告、访客分析或捐赠支付。公开 GitHub issue 人人可见，勿发布个人数据或密码。
+
+删除
+退出 Studio，通过 Windows 应用列表卸载。删除设置前先保留所需信息，然后谨慎删除 %LOCALAPPDATA%\DeskDeck 和自选备份／数据目录。Android 数据可在应用信息中清除；ESP32 凭据请按设备设置／重置指南处理。删除的设置可能无法恢复。隐私与安全联系：deskdeck.app@gmail.com。
+
+可选待机广告
+默认关闭。启用并连接受支持 ESP32 或 Android 后，Baroham 从官网下载广告目录和静态图片，不发送用户标识、使用历史、展示或点击报告。托管方 GitHub 可能处理请求 IP 等连接信息。图片临时保存在 PC 与设备内存，链接不会自动打开，可随时关闭。没有有效下载广告时显示附带的 Baroham 介绍。
+
+手动媒体库
+手动注册的链接、本地路径、名称、收藏和最近 Baroham 打开请求时间保存在 PC 配置中，并包含于配置导出。不自动采集浏览器播放，也不为媒体注册检查标签页或页面。OS 正在播放元数据仍用于当前曲目显示及媒体控制。旧自动记录留在配置中，但除非明确固定，否则隐藏。已有按钮保持不变，媒体库不发送给提供者。
+
+当您明确添加名称为空的 URL 时，Studio 请求该地址以获取媒体标题，不使用浏览器登录 Cookie 或账户凭据，也不执行页面脚本。服务商可能处理 IP 等常规请求信息。未获得标题时，会按服务商和地址生成名称。
+
+主题、媒体封面与视频
+用户选择的主题图片及视频可能保存在 PC 配置／缓存中，并传输到支持的 Android 设备应用内部存储以复用，不上传给提供者。清除视频选择仅移除设置引用，不删除原视频或现有缓存。获取媒体封面会请求媒体服务或图片主机，对方可能处理 IP 等普通请求信息，图片会缓存在 PC。附加小组件可能访问自己的外部服务，请查看其声明。
+</div></article></main><footer class="wrap footer"><div>© 2026 Baroham<br>公开免费评估版</div><div class="footer-links"><a href="terms.zh-Hans.html">使用条款</a><a href="privacy.zh-Hans.html">隐私 & 通信</a><a href="third-party.zh-Hans.html">第三方声明</a><a href="https://github.com/thlee/deskdeck">GitHub ↗</a><a href="mailto:deskdeck.app@gmail.com">联系</a></div></footer></body></html>

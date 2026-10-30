@@ -1,0 +1,15 @@
+请依据附带的 Baroham 小组件 API 指南（API.zh-Hans.md）和 Hello 示例开发。
+所需功能：[填写需求]
+目标：Windows Studio 0.9.40+ / macOS 0.9.40 build148+。
+
+1. 默认制作外部 JavaScript ZIP，需要触控时使用 packageVersion 3。
+2. 将 manifest.json、main.js、settings.json 放在 ZIP 根目录，指定唯一 ID 和 major.minor.patch 版本。
+3. 不要假设或编造文档未列出的 API、npm、DOM、fetch、文件访问、OS 执行、摄像头或麦克风功能。先说明不支持的要求。
+4. 默认采用原有 480×320 坐标。响应式仅用于支持 viewport:1 的开发版，在 requires 声明 canvas/settings/touch/viewport，并每帧使用 api.width、height、contentRect 布局。触控已在同一坐标系内，可能为小数。现有设备连接会回退至 480×320，顶部和左右导航由 Studio 管理。
+5. render(api) 必须同步，绘图操作不超过 700，状态不超过 32KiB。
+6. api.active 为 false 的预览不要改变游戏状态，避免重复处理 sequence。
+7. 用 api.useThemeBackground?.() 请求主题，支持设置、韩语/英语/日语/中文及长文字。
+8. 仅在需要互联网时声明准确 HTTPS 主机，使用 api.httpJson 缓存。处理加载、失败及禁网情况，不嵌入密钥。
+9. state 不是永久存储。用户选项放在 settings.json。更新同 ID 时增加版本，保持设置兼容。
+10. 提供文件树、所有文件内容、根结构正确的 ZIP、使用方法、许可证和来源、最低版本及验证清单。
+11. 未在实际 Studio 运行就不要声称测试完成，明确区分 Windows、Mac 和设备的未验证项。

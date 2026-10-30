@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="携帯電話、サブモニター、ESP32画面を自分専用のPCショートカットパネルに。Windows向けBaroham無料評価版。"><meta name="theme-color" content="#0b151a"><meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos;; script-src &apos;self&apos;; style-src &apos;self&apos;; img-src &apos;self&apos;; connect-src &apos;none&apos;; object-src &apos;none&apos;; base-uri &apos;self&apos;; form-action &apos;none&apos;"><title>プライバシー &amp; 通信 · Baroham</title><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/widget-development.css"><link rel="alternate" hreflang="ko" href="privacy.html"><link rel="alternate" hreflang="en" href="privacy.en.html"><link rel="alternate" hreflang="ja" href="privacy.ja.html"><link rel="alternate" hreflang="zh-Hans" href="privacy.zh-Hans.html"><link rel="canonical" href="https://thlee.github.io/deskdeck/privacy.ja.html"><script src="assets/docs-languages.js" defer></script></head><body><a class="skip" href="#main">本文へスキップ</a><header class="header"><div class="wrap header-inner"><a class="brand" href="index.ja.html"><img src="assets/logo.svg" alt="" width="34" height="34">Baroham</a><div class="header-actions"><nav class="main-nav" aria-label="メインメニュー"><a href="index.ja.html#devices">対応画面</a><a href="start.ja.html">はじめに</a><a href="widgets.ja.html">ウィジェット</a><a href="themes.ja.html">テーマ</a><a href="index.ja.html#faq">よくある質問</a><a class="nav-download" href="https://github.com/thlee/deskdeck/releases/tag/v0.9.40">ダウンロード ↗</a><a href="developers.ja.html">ウィジェット開発</a></nav><nav class="language-switch" aria-label="言語"><a href="privacy.html" lang="ko" hreflang="ko">한국어</a><span aria-hidden="true">/</span><a href="privacy.en.html" lang="en" hreflang="en">English</a><span aria-hidden="true">/</span><a href="privacy.ja.html" lang="ja" hreflang="ja" aria-current="page">日本語</a><span aria-hidden="true">/</span><a href="privacy.zh-Hans.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav></div></div></header><main id="main"><div class="wrap subhero"><p class="eyebrow">プライバシー & 通信</p><h1>プライバシー & 通信</h1><p>Barohamが保存する情報と通信するサービス。</p></div><article class="wrap legal-width"><div class="legal-actions"><a href="legal/PRIVACY.en.txt">英語の原文</a><a href="legal/PRIVACY.ko.txt" lang="ko">韓国語の原文</a></div><p class="callout">日本語参考訳。韓国語・英語の原文と併せてご確認ください。第三者ライセンスの原文は変更していません。 <a download href="legal/privacy.ja.txt">TXT</a></p><div class="legal-text">Baroham 公開無料評価版 プライバシー・通信通知
+版：2026-10-18 · 提供者：이태호 · 連絡先：deskdeck.app@gmail.com
+
+ローカル保存
+導入済みStudioは設定を%LOCALAPPDATA%\DeskDeck、プログラムを%LOCALAPPDATA%\Programs\DeskDeckに保存します。明示的なデータディレクトリ指定は設定先を上書きします。ボタン、実行パス、ショートカット・マクロ、ペアリング、ウィンドウサイズ、選択都市、天気キャッシュ、診断ログを含みます。マクロ文字列はWindows利用者範囲のDPAPIで暗号化し、編集・実行時に復号します。同一利用者で動くマルウェアに対するパスワード管理保証ではありません。
+
+任意のマクロ録画
+利用者が録画を開始した間だけキー入力とショートカットをローカル収集します。別の文字収集オプションを有効にすると、アクセシビリティAPIが公開する編集可能な文字も記録できます。パスワード欄は除外し、文字列は他のマクロと同じく暗号化します。提供者へは送りません。保存前に記録手順を確認してください。
+
+機器通信
+Studioは登録機器と描画済みボタン・ウィジェット画像、動作ID、タッチ入力を交換します。PCデスクトップ全体を配信しません。Wi-Fiはローカル検出とペアリングを使い、電話の無線接続にはTLSを使います。AOAはUSBです。登録機器は設定されたPC操作を実行できるためペアリング情報を共有しないでください。ESP32のWi-Fi設定やフラッシュ全体のバックアップにはパスワードが含まれる場合があります。バックアップは指定先に保存され、サポートに添付してはいけません。
+
+任意の外部サービス
+韓国の観測地点はKMA XMLフィード、その他の座標地点はMET Norwayを使います。選択緯度・経度を小数2桁に丸めた値、IPアドレス、アプリ識別情報を送ります。MET NorwayはIP・座標をノルウェーで記録する場合があります。応答はキャッシュします。都市名検索は同梱GeoNames一覧で行い検索サービスへ送りません。OS位置情報はOS権限に従い、手動都市選択も可能です。サイトのアイコン取得ではそのサイトに接続します。
+
+追加ウィジェットの導入・使用では提供サービスと通信します。コイン価格はUpbit公開API、ニュースは既定NASAまたは利用者指定の公開RSS/Atomへアクセスします。接続IPと通常のHTTP要求情報が相手に渡ります。フィードURLと設定はローカル保存し、正規化した見出し・リンクはメモリにキャッシュします。見出しのタップでPCブラウザーに原文を開きます。ZIP導入やフィード追加前に出典・利用条件を確認してください。
+
+Microsoft WebView2
+WebView2は既定でMicrosoft Defender SmartScreenを使います。SmartScreen情報や診断データがMicrosoftへ送られる場合があり、Evergreen RuntimeはMicrosoftから更新を受けます。未導入ならセットアップがMicrosoftからダウンロードします。https://aka.ms/privacy と https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/data-privacy を参照してください。
+
+Android配布と任意USBドライバー
+QR・ブラウザーによるAPK導入には一時的なローカルHTTPページを使います。そのページに到達できるLAN内の他者もAPKを入手できます。信頼するネットワークを使い、導入後は画面を閉じてください。導入はAndroidが管理し、公開APKはデバッグ無効で、上書き更新用に従来の署名証明書を維持します。ストア配布ではありません。AOA用UsbDkは任意の別途導入で、同梱や無通知導入はしません。ADB・デバッグツールは含みません。
+
+権限とサポート
+通常の導入・基本利用に管理者権限は不要です。ファイアウォール変更や任意ドライバーには別の昇格が必要な場合があります。ログイン時起動は一般設定で変更できます。通信・入力処理を止めるにはトレイから終了します。アカウント、利用状況、クラッシュ情報を提供者へ自動アップロードしません。自分で送ったメール・資料だけが提供者に届きます。ログにパスやエラー文が含まれるため共有前に確認してください。
+
+公開サイトとダウンロード
+GitHub Pages・Releasesを使用します。GitHubは自社ポリシーに従いIPやサービス運用データを処理する場合があります：https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement 。紹介サイトには別の広告、訪問分析、寄付決済はありません。公開GitHub Issueは誰でも見られるので個人情報やパスワードを載せないでください。
+
+削除
+Studioを終了しWindowsアプリ一覧から削除します。設定削除は必要情報を保管した後、%LOCALAPPDATA%\DeskDeckと指定したバックアップ・データフォルダーを慎重に削除してください。Androidはアプリ情報からデータ消去、ESP32は機器設定・リセット案内に従います。削除した設定は復元できない場合があります。連絡先：deskdeck.app@gmail.com。
+
+任意の待機画面広告
+既定で無効です。有効にして対応ESP32・Androidを接続すると公式サイトから広告一覧と静止画像を取得します。利用者ID、利用履歴、表示・クリック報告は送信しません。配信元GitHubは要求IPなどの接続情報を処理する場合があります。広告はPC・機器メモリに一時保持し、リンクを自動で開きません。いつでも無効にできます。取得済み広告がない、または無効な場合は同梱Baroham紹介を表示します。
+
+手動メディアライブラリ
+手動登録リンク、ローカルパス、名前、お気に入り、直近のBaroham開く要求時刻はPCプロファイルに保存し、エクスポートにも含まれます。ブラウザー再生を自動収集せず、登録目的でタブやページを調べません。OSの再生中情報は現在曲表示・操作に引き続き使います。旧自動記録はプロファイルに残りますが明示的なピン留めなしでは非表示です。既存ボタンは維持し、ライブラリを提供者へ送りません。
+
+名前が空のURLを明示追加した場合は、そのURLへタイトル取得を要求します。ブラウザーのログインCookieや認証情報を使わずページスクリプトも実行しません。相手はIPなど通常要求情報を処理できます。取得不能なら提供元とアドレスから名前を作ります。
+
+テーマ・メディア画像・動画
+利用者が選んだテーマ画像・動画はPCのプロファイルやキャッシュに保存し、対応Androidのアプリ内部へ再利用用に転送する場合があります。提供者へアップロードしません。動画選択解除は設定参照を消すだけで、原動画や既存キャッシュは削除しません。メディア画像取得ではサービスや画像ホストへ要求し、相手がIPなどを処理する場合があります。取得画像はPCにキャッシュします。追加ウィジェットの外部通信はそれぞれの通知を確認してください。
+</div></article></main><footer class="wrap footer"><div>© 2026 Baroham<br>公開無料評価版</div><div class="footer-links"><a href="terms.ja.html">利用規約</a><a href="privacy.ja.html">プライバシー & 通信</a><a href="third-party.ja.html">外部ライセンス</a><a href="https://github.com/thlee/deskdeck">GitHub ↗</a><a href="mailto:deskdeck.app@gmail.com">お問い合わせ</a></div></footer></body></html>
