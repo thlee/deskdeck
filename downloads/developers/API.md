@@ -62,6 +62,26 @@ Budget: ≤700 recorded drawing operations, ≤16 nested saves, 750 ms worker de
 The worker is isolated, but this is not a hard OS memory quota. An excessive
 allocation can still disrupt the web engine. Only install trusted packages.
 
+Development-build hardening (after public 0.9.40): state must contain only plain
+JSON objects/arrays, strings, finite numbers, booleans and null. The 32 KiB limit
+counts serialized UTF-8 bytes, with at most 20 nesting levels and 4,096 value
+nodes. Binary buffers, typed arrays, Map/Set, Date, cycles and non-finite numbers
+are rejected. The parent validates raw Worker messages as well as normal API
+output; invalid frames do not replace the last accepted state. Limits apply
+after message transfer and do not impose a hard memory quota on the Worker.
+
+In updated development builds, execution failures and safety-rule violations suspend
+the package immediately. The host saves the reason and time, cancels its pending
+work and prevents further execution, including previews. Suspension survives
+Studio restart, ZIP upgrades and reinstallation. Widget management shows the
+reason; only explicit user confirmation enables it again. Reinstalling a suspended
+ID can replace its files but does not run the installation preview or lift the
+suspension. Another violation suspends it again. Offline operation, DNS lookup
+failure, ordinary network timeouts, server errors and invalid JSON responses do
+not suspend a widget. A private destination, undeclared URL or response-size
+violation does. If saving the suspension record fails, the host reports the error
+and keeps the in-memory block for the current session.
+
 ## Touch — packageVersion 3
 
 api.active is false in passive previews. Do not advance game state from preview
@@ -82,6 +102,13 @@ The host accepts declared public HTTPS endpoints on port443, no credentials,
 cookies or redirects. Up to8 request descriptions/frame,4 in flight,
 1 new request/second/package; response ≤1 MiB, refresh10 seconds–6 hours.
 Network failures preserve cached data and back off. 429/418 pause calls for ≥60s.
+
+Updated development builds validate every resolved destination and connect only
+to those validated public IP addresses, while checking TLS against the original
+hostname. Loopback, private, link-local and reserved addresses, mixed public/private
+DNS answers and redirects are rejected. The 1 MiB response limit is enforced
+while receiving data, including responses without Content-Length. This policy
+applies to widget HTTPS; local device connections remain separate.
 
 Studio's internet switch blocks package HTTPS and feed requests and shows its
 own enable-in-settings notice. It does not disable USB or local Wi-Fi connections.

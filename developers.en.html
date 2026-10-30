@@ -33,4 +33,18 @@ Do not claim Studio or physical device tests that were not run; report Windows,
 macOS and device verification separately.
 
 For responsive layout, require viewport:1 on an updated development host (not public 0.9.40). Recompute from api.width/height/contentRect every render. Inputs are already transformed and may be fractional. Existing physical displays fall back to 480×320. Do not claim native-resolution raster output.
+
+Development hosts validate plain JSON state (serialized UTF-8 ≤32KiB, depth≤20, value nodes≤4096); do not store buffers, typed arrays, Map/Set, Date, cycles or non-finite numbers. Declared HTTPS hosts must resolve only to public IPs; internal addresses are blocked and response bodies are capped during reception. These stronger checks are not present in public 0.9.40.
+
+In updated development builds, execution failures and safety-rule violations suspend
+the package immediately. The host saves the reason and time, cancels its pending
+work and prevents further execution, including previews. Suspension survives
+Studio restart, ZIP upgrades and reinstallation. Widget management shows the
+reason; only explicit user confirmation enables it again. Reinstalling a suspended
+ID can replace its files but does not run the installation preview or lift the
+suspension. Another violation suspends it again. Offline operation, DNS lookup
+failure, ordinary network timeouts, server errors and invalid JSON responses do
+not suspend a widget. A private destination, undeclared URL or response-size
+violation does. If saving the suspension record fails, the host reports the error
+and keeps the in-memory block for the current session.
 </textarea><div class="actions"><button class="button primary dev-copy" type="button" data-copy>Copy instructions</button><a download href="downloads/developers/AI.en.txt">Download text file</a></div><p id="copy-status" class="dev-copy-status" role="status" aria-live="polite"></p></section><section id="test"><h2>Test & share</h2><ul><li>Check defaults, long text, languages and light/dark themes.</li><li>Check passive preview, active fullscreen, repeated taps and widget switching.</li><li>For online widgets test loading, service errors and internet disabled. Never put secret keys in a ZIP.</li><li>Update the same ID with a higher version and verify saved options survive. Removing a widget deletes its managed settings.</li><li>When sharing, include the minimum Studio version, license, attribution and what you tested on each platform.</li></ul><div class="callout">The MIT license applies to this example only, not Studio or other widgets/artwork. Importing a ZIP does not automatically publish it to the website.</div><p>Validate JavaScript ZIPs in Studio. The older SDK browser preview is for declarative JSON.</p><p><a href="downloads/developers/SHA256SUMS.txt">SHA-256</a> · <a href="widgets.en.html">Explore widgets</a> · <a href="mailto:deskdeck.app@gmail.com">Developer support</a></p></section></div></div></main><footer class="wrap footer"><div>© 2026 Baroham<br>Free public preview</div><div class="footer-links"><a href="terms.en.html">Terms</a><a href="privacy.en.html">Privacy & communication</a><a href="third-party.en.html">Third-party notices</a><a href="https://github.com/thlee/deskdeck">GitHub ↗</a><a href="mailto:deskdeck.app@gmail.com">Contact</a></div></footer></body></html>
