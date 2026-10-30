@@ -1,6 +1,6 @@
 # Baroham widget API — public authoring guide
 
-Guide revision: 2026-10-30. Recommended baseline: Windows Studio 0.9.40+;
+Guide revision: 2026-10-30. Recommended baseline: Windows Studio 0.9.41+;
 macOS 0.9.40 build148+ (local build verified; see the website for available downloads).
 This guide and the Hello example describe the same format on both hosts.
 Studio runs widgets on the PC. Android, ESP32 and the virtual screen receive the
@@ -62,7 +62,7 @@ Budget: ≤700 recorded drawing operations, ≤16 nested saves, 750 ms worker de
 The worker is isolated, but this is not a hard OS memory quota. An excessive
 allocation can still disrupt the web engine. Only install trusted packages.
 
-Development-build hardening (after public 0.9.40): state must contain only plain
+Windows 0.9.41 / macOS 0.9.40 build148 hardening: state must contain only plain
 JSON objects/arrays, strings, finite numbers, booleans and null. The 32 KiB limit
 counts serialized UTF-8 bytes, with at most 20 nesting levels and 4,096 value
 nodes. Binary buffers, typed arrays, Map/Set, Date, cycles and non-finite numbers
@@ -70,7 +70,7 @@ are rejected. The parent validates raw Worker messages as well as normal API
 output; invalid frames do not replace the last accepted state. Limits apply
 after message transfer and do not impose a hard memory quota on the Worker.
 
-In updated development builds, execution failures and safety-rule violations suspend
+In Windows 0.9.41 and macOS 0.9.40 build148 or later, execution failures and safety-rule violations suspend
 the package immediately. The host saves the reason and time, cancels its pending
 work and prevents further execution, including previews. Suspension survives
 Studio restart, ZIP upgrades and reinstallation. Widget management shows the
@@ -103,7 +103,7 @@ cookies or redirects. Up to8 request descriptions/frame,4 in flight,
 1 new request/second/package; response ≤1 MiB, refresh10 seconds–6 hours.
 Network failures preserve cached data and back off. 429/418 pause calls for ≥60s.
 
-Updated development builds validate every resolved destination and connect only
+Windows 0.9.41 / macOS 0.9.40 build148 and later validate every resolved destination and connect only
 to those validated public IP addresses, while checking TLS against the original
 hostname. Loopback, private, link-local and reserved addresses, mixed public/private
 DNS answers and redirects are rejected. The 1 MiB response limit is enforced
@@ -116,10 +116,10 @@ Offline packages need no internet permission. Never embed API secrets in ZIPs.
 Camera/microphone capture, arbitrary files, shell execution and unrestricted
 browser opening are not exposed to script widgets. Request only needed data.
 
-## Responsive coordinates (new development builds)
+## Responsive coordinates (Windows 0.9.41 / macOS 0.9.40 build148+)
 
 This extension requires an updated Windows/macOS Studio advertising `viewport:1`.
-**The public 0.9.40 release does not support it.** Importing the responsive example
+**Supported in Windows 0.9.41 and macOS 0.9.40 build148 or later.** Importing the responsive example
 into an older host fails safely as an unsupported capability. No existing package
 opts in automatically and Hello remains a legacy 480×320 example.
 

@@ -26,7 +26,7 @@ Turn a phone, tablet, second monitor or ESP32 display into your own PC control p
 ## 위젯 다운로드
 [위젯 라이브러리](https://thlee.github.io/deskdeck/widgets.html) · [Widgets (English)](https://thlee.github.io/deskdeck/widgets.en.html)
 
-기본 시계·네코·미디어·시스템 정보·동영상은 Studio에서 바로 선택합니다. 추가 위젯은 정보(코인 시세·뉴스), 게임(오델로), 휴식(모닥불·어항·사진 슬라이드쇼)으로 나누어 제공합니다. ZIP을 다운로드하고 **전체화면 → 위젯 관리** 목록에 끌어다 놓으세요. 업데이트할 때는 기존 위젯을 삭제하지 않고 새 ZIP을 추가하면 설정을 유지합니다. 사진 슬라이드쇼는 Studio 0.9.40 이상이 필요합니다. 모닥불·어항는 MIT 라이선스와 출처 고지를 ZIP에 포함합니다.
+기본 시계·네코·미디어·시스템 정보·동영상은 Studio에서 바로 선택합니다. 추가 위젯은 정보(코인 시세·뉴스), 게임(오델로), 휴식(모닥불·어항·사진 슬라이드쇼)으로 나누어 제공합니다. ZIP을 다운로드하고 **전체화면 → 위젯 관리** 목록에 끌어다 놓으세요. 업데이트할 때는 기존 위젯을 삭제하지 않고 새 ZIP을 추가하면 설정을 유지합니다. 사진 슬라이드쇼는 Studio 0.9.41 이상이 필요합니다. 모닥불·어항는 MIT 라이선스와 출처 고지를 ZIP에 포함합니다.
 
 ## 테마 다운로드
 [테마 라이브러리](https://thlee.github.io/deskdeck/themes.html) · [Themes (English)](https://thlee.github.io/deskdeck/themes.en.html)
@@ -34,7 +34,7 @@ Turn a phone, tablet, second monitor or ESP32 display into your own PC control p
 안개 숲·고요한 바다·농촌·모모 — 작은 도우미·데키 — 민트 도우미 테마를 내려받아 **보기 → 테마** 창에 ZIP을 끌어다 놓고 적용하세요. 배경 이미지와 버튼 색상을 함께 바꾸며 기존 버튼·매크로 설정은 유지됩니다.
 
 ## 현재 배포
-- 바로함 Studio **0.9.40**, Windows 10 1809+ / Windows 11, x64.
+- 바로함 Studio **0.9.41**, Windows 10 1809+ / Windows 11, x64.
 - Android **0.5.55**, Android 5.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
 - JC3248W535 ESP32-S3 펌웨어 **0.8.2**. USB·Wi-Fi 및 초기 설치/백업 안내.
 - 가상 바로함: 별도 장치 없이 마우스나 작은 터치·보조 모니터로 사용할 수 있습니다.
@@ -60,4 +60,4 @@ GitHub가 자동으로 표시하는 “Source code (zip/tar.gz)”에는 **이 �
 - Android 터치패드: Wi-Fi·USB로 포인터 이동, 클릭, 드래그와 스크롤을 지원합니다.
 - Android touchpad: pointer movement, clicks, dragging and scrolling over Wi-Fi or USB.
 
-New in the widget library: **Photo Slideshow 1.2.0**, requiring Studio 0.9.40+. Download its ZIP separately; existing settings are preserved.
+New in the widget library: **Photo Slideshow 1.2.0**, requiring Studio 0.9.41+. Download its ZIP separately; existing settings are preserved.

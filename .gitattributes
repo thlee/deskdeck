@@ -1,0 +1,4 @@
+# Developer downloads and their published checksums must match on every checkout.
+downloads/developers/*.md text eol=lf
+downloads/developers/*.txt text eol=lf
+downloads/developers/*.zip -text
