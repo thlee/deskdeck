@@ -8,3 +8,5 @@ Thumbs.db
 *.jks
 *.keystore
 .env*
+
+!downloads/developers/*.zip
