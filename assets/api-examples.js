@@ -1,6 +1,15 @@
-// Copy only the code block explicitly chosen by the visitor.
+// Example visibility and code copying are controlled only by visitor actions.
 (() => {
   'use strict';
+  for (const button of document.querySelectorAll('[data-examples-action]')) {
+    button.addEventListener('click', () => {
+      const examples = document.querySelectorAll('#api-examples .api-example');
+      const open = button.dataset.examplesAction === 'expand';
+      for (const example of examples) example.open = open;
+      const status = document.getElementById('api-examples-status');
+      if (status) status.textContent = button.dataset.examplesMessage.replace('{count}', String(examples.length));
+    });
+  }
   for (const button of document.querySelectorAll('[data-copy-code]')) {
     button.addEventListener('click', async () => {
       const code = document.getElementById(button.dataset.copyCode);
