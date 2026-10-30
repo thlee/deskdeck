@@ -42,7 +42,10 @@ Studio records/validates commands and paints them after successful execution.
   scale, rotate, fillText, approximate measureText.
 - Properties: fillStyle/strokeStyle (#RRGGBB), font (`[600 ]SIZEpx sans-serif` or
   monospace), textAlign, textBaseline, lineWidth, globalAlpha.
-- api.width/height: fixed logical 480/320. Do not replace these with device pixels.
+- api.width/height: legacy packages always receive 480/320. Scripts explicitly
+  requiring `viewport: 1` can receive the current logical display size; see below.
+- api.contentRect: {x,y,width,height} in the same coordinate system, excluding
+  the host's top navigation and left/right edge navigation. Place controls here.
 - api.now: Unix milliseconds. Derive animation from elapsed time rather than
   assuming every scheduled frame will be sent.
 - api.language; api.t(key, fallback): locales/ko.json, en.json, ja.json, zh-Hans.json.
@@ -85,6 +88,45 @@ own enable-in-settings notice. It does not disable USB or local Wi-Fi connection
 Offline packages need no internet permission. Never embed API secrets in ZIPs.
 Camera/microphone capture, arbitrary files, shell execution and unrestricted
 browser opening are not exposed to script widgets. Request only needed data.
+
+## Responsive coordinates (new development builds)
+
+This extension requires an updated Windows/macOS Studio advertising `viewport:1`.
+**The public 0.9.40 release does not support it.** Importing the responsive example
+into an older host fails safely as an unsupported capability. No existing package
+opts in automatically and Hello remains a legacy 480×320 example.
+
+```json
+"hostApiVersion": 1,
+"requires": {"canvas": 1, "settings": 1, "touch": 1, "viewport": 1}
+```
+
+Use this on JavaScript packages (packageVersion 1 or 3), not declarative services.
+The separate `responsive-example` shows two columns in landscape and two rows in
+portrait. Read api.width, api.height and api.contentRect **on every render**;
+recompute positions after resize without discarding game/counter state.
+Touch x/y use the same coordinates and can be fractional. Continue deduplicating
+sequence and ignoring input when api.active is false. Never rescale input again.
+
+The available logical area currently follows the Mac/Windows virtual screen size.
+For example a 600×960 virtual screen supplies width=600, height=960. A larger
+screen is not a reason to use tiny fixed fonts: choose a readable scale, e.g.
+Math.min(api.width/480, api.height/320), and use width/height to choose the layout.
+The host handles Back and page edges; contentRect is the conservative usable area.
+
+**Compatibility boundary:** ESP32 and existing Android display protocols still
+use the fixed 480×320 frame and input area. On these connections the new package
+receives 480×320 and must render a working fallback. This change does not update
+Android, ESP32 firmware, physical device protocols or transmission resolution.
+Wire/raster output remains bounded to 480×320 (legacy low-resolution clients
+240×160); virtual presentation maps it to the available area. This is adaptive
+layout support, not a promise of native-resolution text or higher pixel detail.
+Passive Studio previews follow the connected display's compatibility mode.
+
+Do not save absolute pixel positions indefinitely. Store relative positions or
+reclamp them when width/height change. State is shared by preview and active frames;
+layout-only changes must not reset user progress. API geometry is bounded to 4096
+per axis; all existing command, state and time budgets remain in force.
 
 ## Packaged images
 
