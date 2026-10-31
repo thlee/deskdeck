@@ -7,6 +7,6 @@ e067e320b12e9bdb7a0c7be8d8cac496da46b4a1693caf31b6c227ca407d43b3  AI.zh-Hans.txt
 79c7ab8eafdffd29c3322300505bd15d0cf26f5706297cbd10b625cb706dc075  API.ko.md
 41e2494738f8b5daf38fce6cdd9b23e7c92fa4b65df1f946b991c39c9a16ff01  API.md
 46fe0958f23449edc28614f51c3b8db84e5a324474710b1f1db51e26644c97dd  API.zh-Hans.md
-f39feed29c42227482514fd20626eeb289d594b1e2a2b3b7e9e5019a8f8e265d  baroham-widget-starter-2026-10-30.zip
+fca8243c1562dbf40c20177adaaf5e05a21aa4132f1fe91dd7135f9e996ea599  baroham-widget-starter-2026-10-30.zip
 d34eb3e966a4cbb84ba9094b241268f151474ddafdec833eae176a4bf898d6ab  hello-baroham-1.0.0.deskdeck-widget.zip
 7cfc6a5d58b2276378d854e405ad5a01dfb0110608922e9de8256fe10dae74c9  responsive-baroham-1.0.0.deskdeck-widget.zip

@@ -34,7 +34,7 @@ Turn a phone, tablet, second monitor or ESP32 display into your own PC control p
 안개 숲·고요한 바다·농촌·모모 — 작은 도우미·데키 — 민트 도우미 테마를 내려받아 **보기 → 테마** 창에 ZIP을 끌어다 놓고 적용하세요. 배경 이미지와 버튼 색상을 함께 바꾸며 기존 버튼·매크로 설정은 유지됩니다.
 
 ## 현재 배포
-- 바로함 Studio **0.9.41**, Windows 10 1809+ / Windows 11, x64.
+- 바로함 Studio **0.9.42**, Windows 10 1809+ / Windows 11, x64.
 - Android **0.5.55**, Android 5.0+. Studio에 포함하며 QR/브라우저로 설치합니다.
 - JC3248W535 ESP32-S3 펌웨어 **0.8.2**. USB·Wi-Fi 및 초기 설치/백업 안내.
 - 가상 바로함: 별도 장치 없이 마우스나 작은 터치·보조 모니터로 사용할 수 있습니다.
