@@ -31,6 +31,9 @@ main.js 256 KiB. Absolute paths, traversal, symlinks and case-insensitive duplic
 names are rejected. Include attribution/license notices for all borrowed material.
 The example's MIT license does not license Studio, other widgets or third-party art.
 
+Independently written widgets may be distributed free or sold, with prices and license terms set by their authors. No separate API fee or revenue share is payable to Baroham for independent sales. Preserve copyright and license notices when reusing MIT examples; other code, artwork and audio retain their own licenses. This permission does not license the host code or brand as a whole. See WIDGET-LICENSE.en.txt for the full conditions.
+
+
 ## JavaScript entry point and drawings
 
 Define `const widget = { render(api) { /* synchronous drawing */ } };`.

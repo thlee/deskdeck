@@ -12,6 +12,9 @@ Hello 使用 packageVersion 3、fps 1、背景 #10252B 和 permissions {"https":
 
 ZIP 限制：压缩及解压总量各 8 MiB，128 个文件，每文件 1 MiB，main.js 256 KiB。拒绝绝对路径、目录穿越、符号链接及忽略大小写的重复名称。所有借用材料须包含来源与许可证。示例 MIT 许可不涵盖 Studio、其他小组件或第三方美术。
 
+独立编写的小组件可以免费或付费分发，由作者制定价格和使用条款。自主销售无须向巴罗哈姆支付额外 API 费用或销售分成。重用 MIT 示例时须保留版权声明和许可证；其他代码、图片和音频仍遵守各自许可证。本许可不授权整体重用主程序代码或品牌。完整条件请参阅 WIDGET-LICENSE.zh-Hans.txt。
+
+
 ## JavaScript 入口与绘图
 
 定义 `const widget = { render(api) { /* 同步绘图 */ } };`。不提供 import/require/npm、DOM、直接 fetch、文件系统或 OS 命令 API。Studio 记录并验证指令，执行成功后绘制。

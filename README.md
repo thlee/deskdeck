@@ -61,3 +61,18 @@ GitHub가 자동으로 표시하는 “Source code (zip/tar.gz)”에는 **이 �
 - Android touchpad: pointer movement, clicks, dragging and scrolling over Wi-Fi or USB.
 
 New in the widget library: **Photo Slideshow 1.2.0**, requiring Studio 0.9.41+. Download its ZIP separately; existing settings are preserved.
+
+<!-- widget-licensing:start -->
+
+## 위젯 배포와 판매
+
+직접 만든 위젯은 무료로 나누거나 판매할 수 있습니다. 가격과 이용 조건은 제작자가 정하며, 독립 위젯의 API 사용·자체 판매에 대해 바로함에 별도 사용료나 수익 배분을 지급할 의무는 없습니다.
+
+[제작·배포·판매 안내 전문](https://thlee.github.io/deskdeck/developers.html#licensing)
+
+## Widget distribution and sales
+
+Share or sell widgets you create independently. Authors set their prices and license terms; no separate API license fee or revenue share is payable to Baroham for their independent distribution and sales.
+
+[Full creation, distribution and sales guide](https://thlee.github.io/deskdeck/developers.en.html#licensing)
+<!-- widget-licensing:end -->

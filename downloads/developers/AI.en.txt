@@ -33,3 +33,5 @@ failure, ordinary network timeouts, server errors and invalid JSON responses do
 not suspend a widget. A private destination, undeclared URL or response-size
 violation does. If saving the suspension record fails, the host reports the error
 and keeps the in-memory block for the current session.
+
+Independently written widgets may be distributed free or sold, with prices and license terms set by their authors. No separate API fee or revenue share is payable to Baroham for independent sales. Preserve copyright and license notices when reusing MIT examples; other code, artwork and audio retain their own licenses. This permission does not license the host code or brand as a whole. See WIDGET-LICENSE.en.txt for the full conditions.

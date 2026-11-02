@@ -1,0 +1,26 @@
+Baroham widget creation, distribution and sales guide
+Version: 1.0 / 2026-11-02
+Provider: 이태호 / Product: Baroham / Contact: deskdeck.app@gmail.com
+
+1. Free and paid distribution of independent widgets
+You may create, use, modify, distribute and sell widgets independently written for the published Baroham widget APIs, free of charge or for a price. The separate terms for the Baroham application do not prohibit sales of these independent widgets. Authors retain copyright in their own work and may set prices and license terms for material they have authority to license. Merely using the APIs does not require a separate publication of widget source code. Obligations under licenses for included third-party material still apply.
+
+2. Reusing examples and existing widgets
+The Hello and Responsive developer examples may be used, modified and redistributed commercially under the MIT license in each example folder. Include the original copyright notice and full license when copying or using a substantial portion. MIT does not require publication of modified source. Check each other widget's package license: MIT-licensed widgets may be sold under its conditions, but the examples' MIT license does not cover all widgets, the SDK, Studio or artwork. This guide does not withdraw or further restrict existing open-source permissions.
+
+3. Code, artwork, audio and external services
+Create the code, illustrations, characters, fonts, music, video and data yourself or obtain the necessary permissions. Follow the applicable attribution, license and external-service terms. Material restricting commercial use cannot be included in a paid widget without permission. Include a LICENSE and required credits in the package. Purchasers' rights follow the widget's terms and the licenses of its included material.
+
+4. The Baroham application and brand
+This guide does not grant permission to copy or resell private or separately restricted Studio, Android or firmware code, or proprietary designs. Separate licenses and existing permissions for each part remain effective. You may describe compatibility, such as 'a widget for Baroham', but must not imply official status, affiliation, verification or endorsement without permission, or use the Baroham name and logo as your own product trademark.
+
+5. Fees and a possible future marketplace
+No separate API license fee or revenue share is payable to Baroham for independent widgets distributed or sold by their authors under this guide. If an official marketplace is introduced, its listing, payment, commission, refund and support conditions will be presented in separate marketplace terms for agreement in advance. Introducing a marketplace alone will not retroactively charge for independent distribution or sales already permitted under this guide.
+
+6. Sales information and support
+Before purchase, sellers should state the author, contact details, price, license terms, minimum Studio version, supported environments, and update, support and refund conditions. Do not identify Baroham as the seller of a third-party widget or claim that Baroham has verified its quality or compatibility. Purchasers must also satisfy the terms and any required feature entitlements of the Baroham version used to install and run the widget.
+
+7. Installation and website listings
+Importing a widget ZIP currently installs it locally; it is not official marketplace registration, review, payment or automatic website publication. Paid widgets follow the same API, permission, security and size limits. This guide does not grant redistribution rights for application binaries or host source, permission to bypass technical restrictions, or a guarantee of continued API compatibility. Contact deskdeck.app@gmail.com about website listings.
+
+This guide clarifies permissions for independent widgets; it does not relicense the application, individual files or third-party material as a whole. The Korean and English texts describe the same permissions; Japanese and Simplified Chinese are reference translations.
