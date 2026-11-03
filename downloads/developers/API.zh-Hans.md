@@ -1,6 +1,6 @@
 # Baroham 小组件 API — 公开开发指南
 
-修订日期：2026-10-30。推荐基线：Windows Studio 0.9.41+；macOS 0.9.40 build148+（本地构建已验证，可下载版本请查看官网）。两端使用本指南及 Hello 示例的同一格式。小组件在 PC 的 Studio 中运行，Android、ESP32 和虚拟屏幕接收渲染结果。JavaScript ZIP 不是 Android 应用或 ESP32 固件。
+修订日期：2026-11-03。现有Hello及viewport示例的文档基线仍为Windows Studio 0.9.41及以上、macOS 0.9.40 build148及以上。新的条件设置（`settings:2`）和设备音频（`audio:2`）要求两平台均使用Studio 0.9.45及以上；macOS build153已在本地验证。Android声音还需手机应用0.5.56及以上。更新Studio不会同时更新手机应用。audio:2在ESP32上保持静音，仅使用虚拟屏幕时才在电脑播放。可下载版本请查看官网。两端使用本指南及 Hello 示例的同一格式。小组件在 PC 的 Studio 中运行，Android、ESP32 和虚拟屏幕接收渲染结果。JavaScript ZIP 不是 Android 应用或 ESP32 固件。
 
 ## 软件包
 
@@ -13,7 +13,6 @@ Hello 使用 packageVersion 3、fps 1、背景 #10252B 和 permissions {"https":
 ZIP 限制：压缩及解压总量各 8 MiB，128 个文件，每文件 1 MiB，main.js 256 KiB。拒绝绝对路径、目录穿越、符号链接及忽略大小写的重复名称。所有借用材料须包含来源与许可证。示例 MIT 许可不涵盖 Studio、其他小组件或第三方美术。
 
 独立编写的小组件可以免费或付费分发，由作者制定价格和使用条款。自主销售无须向巴罗哈姆支付额外 API 费用或销售分成。重用 MIT 示例时须保留版权声明和许可证；其他代码、图片和音频仍遵守各自许可证。本许可不授权整体重用主程序代码或品牌。完整条件请参阅 WIDGET-LICENSE.zh-Hans.txt。
-
 
 ## JavaScript 入口与绘图
 
@@ -97,3 +96,14 @@ api.drawSprite("asset:assets/actor.webp",sx,sy,sw,sh,dx,dy,dw,dh)
 7. 只分享包、许可证及最低 Studio 版本。不要包含用户路径／设置、秘密信息、应用二进制或私有源码。打包器不自动上传市场或审核上架。
 
 旧 SDK preview.html 仅预览声明式 JSON，不用于 JavaScript ZIP 或实时 PC 服务。预检查和实际运行测试请使用 Studio。本指南不保证提供独立的 JavaScript ZIP 浏览器预览。
+
+
+## 场景设置与包内声音 (Studio 0.9.45+)
+
+在设置字段中使用 `visibleWhen` 需要声明 `settings:2`。对象包含其他 choice/toggle 字段的 1–3 个键及其有效值，全部匹配时才显示。隐藏值仍会保留并保存，取消则放弃编辑。不执行表达式。
+
+使用 `api.playSound("rain", 0.2)` 需声明 `audio:1`、`permissions.audio:true` 和 `sounds`。每个声音映射到包内 `assets/<name>.wav`。仅接受 44 字节标准头的 PCM16 WAV，单/双声道，8–48 kHz，1–30 秒，最多 8 个、每个 1 MiB、总计 2 MiB。通过电脑扬声器循环播放一个声音，每个活动帧重复请求以保持播放；省略请求或音量为 0 则停止。音量必须是 0–1 的有限数。预览和安装检查不会播放声音。退出小组件、显示器休眠、隔离或退出应用时停止。主机控制播放器，不提供麦克风、任意 URL/路径或文件写入权限，不向 Android/ESP32 传输此声音。
+
+交互式环境小组件可在 manifest 中设定 `autoRotate:true` 以允许 Studio 的常规轮换。为兼容游戏，默认 false。Relax 包是包含场景设置及原创合成雨声的完整示例。
+
+`audio:2`（Studio 0.9.45+、Android 0.5.56+）沿用相同 API 和限制，但在连接的 Android 设备上播放。仅使用虚拟屏幕时在电脑上播放。ESP32 及不支持 audio_cache 的 Android 保持静音，不回退到电脑播放。Android 声明 `audio_cache:"pcm16-v1"`，并将经过 SHA-256 验证的 WAV 保存在应用私有缓存。USB 和 Wi-Fi 均使用 audio_select，仅在缓存缺失时使用 audio_begin/audio_chunk/audio_finish，每块不超过 65,536 字节。缓存最多8个文件、8 MiB。widget_layout 的 audio_hash/audio_volume 与下一个有效帧同时生效。仅改变音量时保留播放器；省略声音请求则停止。进入后台、断开连接、休眠或退出小组件均停止播放。失去音频焦点后不会反复抢占。原有 `audio:1` 仍在电脑播放。不向小组件授予用户文件写入或删除权限，仅由宿主管理专用缓存。

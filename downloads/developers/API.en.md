@@ -1,7 +1,12 @@
 # Baroham widget API — public authoring guide
 
-Guide revision: 2026-10-30. Recommended baseline: Windows Studio 0.9.41+;
-macOS 0.9.40 build148+ (local build verified; see the website for available downloads).
+Guide revision: 2026-11-03. The existing Hello and viewport examples retain their
+documented baseline: Windows Studio 0.9.41+ and macOS 0.9.40 build148+.
+The newer conditional settings (`settings:2`) and device sound (`audio:2`) require
+Studio 0.9.45+ on both platforms; macOS build153 was verified locally. Android
+sound also requires Android app 0.5.56+. Updating Studio does not update the phone
+app. ESP32 remains silent with audio:2; PC playback is for virtual-display-only
+sessions. See the website for available downloads.
 This guide and the Hello example describe the same format on both hosts.
 Studio runs widgets on the PC. Android, ESP32 and the virtual screen receive the
 rendered output. A JavaScript ZIP is not an Android app or ESP32 firmware.
@@ -32,7 +37,6 @@ names are rejected. Include attribution/license notices for all borrowed materia
 The example's MIT license does not license Studio, other widgets or third-party art.
 
 Independently written widgets may be distributed free or sold, with prices and license terms set by their authors. No separate API fee or revenue share is payable to Baroham for independent sales. Preserve copyright and license notices when reusing MIT examples; other code, artwork and audio retain their own licenses. This permission does not license the host code or brand as a whole. See WIDGET-LICENSE.en.txt for the full conditions.
-
 
 ## JavaScript entry point and drawings
 
@@ -204,3 +208,14 @@ Legacy native-video v4 is not a general video API; Video is already built into S
 The legacy SDK preview.html previews declarative JSON, not JavaScript ZIPs or live
 PC services. Use Studio for package preflight and real runtime tests. No standalone
 JavaScript ZIP browser preview is promised by this guide.
+
+
+## Scene settings and package sound (Studio 0.9.45+)
+
+Declare `settings:2` to use `visibleWhen` on a settings field. The object has 1–3 keys referring to another choice/toggle field, with exact valid values; all conditions must match. Hidden values are retained and saved; cancellation discards edits. No expressions are evaluated.
+
+Declare `audio:1`, `permissions.audio:true` and `sounds` to use `api.playSound("rain", 0.2)`. Each sound maps to a package-local `assets/<name>.wav`. Only canonical 44-byte-header PCM16 WAV, mono/stereo, 8–48 kHz, 1–30 seconds is accepted: at most 8 sounds, 1 MiB per file, 2 MiB total. One looping sound is played through PC speakers. Repeat the request on each active frame to keep playing; omit it or use volume 0 to stop. Volume is a finite number from 0 to 1. Preview/preflight cannot play audio. Leaving the widget, display sleep, quarantine or app exit stops playback. The host controls the player; there is no microphone, arbitrary URL/path or file-write access. Android/ESP32 do not receive this sound.
+
+An interactive ambient package can set `autoRotate:true` in its manifest to allow Studio’s regular widget rotation. It defaults to false for games. The Relax package is a complete example including scene-specific settings and original rain audio.
+
+`audio:2` (Studio 0.9.45+, Android 0.5.56+) uses the same API and limits but plays on the connected Android device. Virtual-display-only sessions play on the PC. ESP32 and Android without audio_cache remain silent; there is no PC fallback for a physical device. Android advertises `audio_cache:"pcm16-v1"` and keeps SHA-256-verified WAVs in an app-private cache. Both USB and Wi-Fi use audio_select, then audio_begin/audio_chunk/audio_finish only on a cache miss; chunks are at most 65,536 bytes. The device cache is bounded to 8 files and 8 MiB. widget_layout audio_hash/audio_volume commit with the next valid frame. Volume changes keep the player; omitting sound stops it. Backgrounding, disconnect, screen sleep and widget exit stop playback. Losing audio focus does not repeatedly reclaim it. Legacy `audio:1` keeps PC playback. Widgets gain no user-file write/delete rights; only the host maintains its dedicated cache.
