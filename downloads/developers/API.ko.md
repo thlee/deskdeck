@@ -1,6 +1,6 @@
 # Baroham 위젯 API — 공개 개발 안내서
 
-문서 개정: 2026-11-03. 기존 Hello·viewport 예제의 안내 기준은 Windows Studio 0.9.41 이상, macOS 0.9.40 build148 이상으로 유지합니다. 새 조건부 설정(`settings:2`)과 기기 소리(`audio:2`)에는 두 플랫폼 모두 Studio 0.9.45 이상이 필요하며, macOS build153을 로컬에서 검증했습니다. Android 소리에는 휴대폰 앱 0.5.56 이상도 필요합니다. Studio 업데이트가 휴대폰 앱까지 업데이트하지는 않습니다. audio:2에서 ESP32는 무음이며 PC 재생은 가상 화면만 사용하는 경우에 적용됩니다. 다운로드 가능한 버전은 공홈에서 확인하세요.
+문서 개정: 2026-11-05. 기존 Hello·viewport 예제의 안내 기준은 Windows Studio 0.9.41 이상, macOS 0.9.40 build148 이상으로 유지합니다. 새 조건부 설정(`settings:2`)과 기기 소리(`audio:2`)에는 두 플랫폼 모두 Studio 0.9.45 이상이 필요하며, macOS build153을 로컬에서 검증했습니다. Android 소리에는 휴대폰 앱 0.5.56 이상도 필요합니다. Studio 업데이트가 휴대폰 앱까지 업데이트하지는 않습니다. audio:2에서 ESP32는 무음이며 PC 재생은 가상 화면만 사용하는 경우에 적용됩니다. 다운로드 가능한 버전은 공홈에서 확인하세요.
 두 호스트는 이 안내서와 Hello 예제의 동일한 형식을 지원합니다. 위젯은 PC의 Studio에서 실행되며 Android·ESP32·가상 화면에는 렌더링 결과가 전달됩니다. JavaScript ZIP은 Android 앱이나 ESP32 펌웨어가 아닙니다.
 
 ## 패키지
@@ -26,7 +26,7 @@ import/require/npm, DOM, 직접 fetch, 파일 시스템, OS 명령 API는 없습
 - api.contentRect: 같은 좌표계의 {x,y,width,height}. 호스트의 상단 탐색과 좌우 가장자리 탐색 영역을 제외합니다. 컨트롤은 이 안에 배치하세요.
 - api.now: Unix 밀리초. 예정된 모든 프레임이 전송된다고 가정하지 말고 경과 시간으로 애니메이션을 계산하세요.
 - api.language; api.t(key, fallback): locales/ko.json, en.json, ja.json, zh-Hans.json.
-- api.settings: 검증된 설정. settings.json은 최대 12개 필드의 배열입니다. 각 필드는 key, type, label, default와 선택적 labelKey를 가집니다. 유형: text(최대 200자), toggle(boolean), choice(choices [{value,label,labelKey?}]), multi(선언된 HTTPS JSON 엔드포인트의 순서 있는 선택 목록; 매핑은 SDK 참조).
+- api.settings: 검증된 설정. settings.json은 최대 12개 필드의 배열입니다. 각 필드는 key, type, label, default와 선택적 labelKey를 가집니다. 유형: text(최대 200자), toggle(boolean), choice(choices [{value,label,labelKey?}]), multi(선언된 HTTPS JSON 엔드포인트의 순서 있는 선택 목록; 매핑은 SDK 참조). Studio 0.9.46 개발판부터 `settings:3`은 최대 16개 설정을 지원합니다.
 - api.state: 최대 32 KiB JSON 상태. 메모리 전용이며 Studio 재시작·패키지 교체·캐시 제거 시 초기화됩니다. 미리보기와 활성 화면이 공유합니다.
 - api.useThemeBackground?.(): 선택된 테마를 먼저 그리도록 요청합니다. 투명한 곳에 보이며 불투명하게 그리면 가려집니다.
 
@@ -80,6 +80,10 @@ api.drawSprite("asset:assets/actor.webp",sx,sy,sw,sh,dx,dy,dw,dh)
 hostApiVersion:1과 requires:{"canvas":1,"system":1,...}을 선언할 수 있습니다. 동봉한 host-api.json은 버전 등록부이지 임의 API 접근 허가가 아닙니다. 전체 선언과 권한 조합은 SDK의 HOST-API.md와 예제를 참고하세요. 미지원 기능은 가져올 때 거부됩니다.
 
 스크립트는 시스템·미디어·날씨의 읽기 전용 api.host 스냅샷을 요청할 수 있습니다. 없는 센서는 0이 아닌 null입니다. 경로, 미디어 제어 핸들, OS 명령, 위치 좌표는 노출하지 않습니다. 스냅샷과 HTTPS를 함께 쓰면 PC 메타데이터가 외부로 전송될 수 있으므로 필요한 경우에만 요청하고 설명하세요.
+
+Studio 0.9.46 개발판에서 `requires.sky:1`과 `permissions.sky:true`를 선언하면 `api.host.sky`로 날씨 지역의 하늘을 읽습니다. `current`는 현재 시각입니다. `day`와 `night`는 지역의 경도에 따른 지방평균태양시로 같은 날의 정오와 자정을 사용합니다. 각 항목의 `sun`과 `moon`은 진북에서 시계 방향으로 잰 방위각 `azimuth`(북쪽 0°, 동쪽 90°)와 지평선 기준 고도 `altitude`(지평선 0°, 그 아래는 음수)를 도 단위로 제공합니다. 지역을 사용할 수 없으면 `api.host.sky`는 null입니다. 위치 좌표는 Studio 내부에서 처리합니다.
+
+`moon.illuminated`는 보이는 달 원반 중 밝은 부분의 비율(0–1)입니다. `moon.phase`는 삭(새달)에서 0으로 돌아오는 주기값입니다(0은 삭, 0.25는 상현, 0.5는 보름, 0.75는 하현). `moon.limbAngle`은 달의 밝은 쪽이 가리키는 방향입니다. 지평선을 수평으로 놓은 화면에서 수직 위쪽을 0°로 하여 방위각이 커지는 쪽으로 시계 방향으로 잽니다(오른쪽 90°).
 
 선언형 packageVersion2는 definition.json, 필요한 경우 defaults, settings.json:[], runtime:"declarative"를 사용하며 main.js는 없습니다.
 - dashboard-v1: 검증된 시계·시스템·날씨·미디어 레이어 조합.

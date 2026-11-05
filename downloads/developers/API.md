@@ -1,6 +1,6 @@
 # Baroham widget API — public authoring guide
 
-Guide revision: 2026-11-03. The existing Hello and viewport examples retain their
+Guide revision: 2026-11-05. The existing Hello and viewport examples retain their
 documented baseline: Windows Studio 0.9.41+ and macOS 0.9.40 build148+.
 The newer conditional settings (`settings:2`) and device sound (`audio:2`) require
 Studio 0.9.45+ on both platforms; macOS build153 was verified locally. Android
@@ -56,7 +56,7 @@ Studio records/validates commands and paints them after successful execution.
 - api.now: Unix milliseconds. Derive animation from elapsed time rather than
   assuming every scheduled frame will be sent.
 - api.language; api.t(key, fallback): locales/ko.json, en.json, ja.json, zh-Hans.json.
-- api.settings: validated settings. settings.json is an array of up to 12 fields.
+- api.settings: validated settings. settings.json is an array of up to 12 fields. Studio 0.9.46 development builds support up to 16 settings with `settings:3`.
   Each has key, type, label, default; optional labelKey. Types: text (≤200 chars),
   toggle (boolean), choice (choices [{value,label,labelKey?}]), multi (ordered
   choices from a declared HTTPS JSON endpoint; see the installed SDK for mapping).
@@ -183,6 +183,10 @@ Scripts can request read-only api.host snapshots for system, media and weather.
 Unavailable sensor values are null, not zero. They do not expose paths, media
 control handles, OS commands or location coordinates. HTTPS combined with these
 snapshots can disclose PC metadata: request both only when necessary and explain it.
+
+In Studio 0.9.46 development builds, declare `requires.sky:1` and `permissions.sky:true` to read `api.host.sky` for the configured weather region. `current` uses the current instant. `day` and `night` use noon and midnight on the same local mean solar date, as determined by the region’s longitude. Each sample contains `sun` and `moon`. Their `azimuth` is measured clockwise from true north (0°, east 90°) and `altitude` is measured from the horizon (0°, negative below it). `api.host.sky` is null when the region is unavailable. Coordinates are private to Studio.
+
+`moon.illuminated` is the fraction of the visible disc that is lit (0–1). `moon.phase` follows the lunar cycle from 0 up to 1, wrapping at the new moon (0 = new, 0.25 = first quarter, 0.5 = full, 0.75 = last quarter). `moon.limbAngle` points toward the bright side, measured clockwise in degrees from the local upright toward increasing azimuth (0° = up, 90° = right on a horizon-aligned display).
 
 Declarative packageVersion2 uses definition.json, defaults when required,
 settings.json:[], runtime:"declarative", and no main.js:

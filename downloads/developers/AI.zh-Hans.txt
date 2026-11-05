@@ -28,3 +28,5 @@ Windows 0.9.41 / macOS 0.9.40 build148 及更高版本会在发生执行错误�
 `audio:2`（Studio 0.9.45+、Android 0.5.56+）沿用相同 API 和限制，但在连接的 Android 设备上播放。仅使用虚拟屏幕时在电脑上播放。ESP32 及不支持 audio_cache 的 Android 保持静音，不回退到电脑播放。Android 声明 `audio_cache:"pcm16-v1"`，并将经过 SHA-256 验证的 WAV 保存在应用私有缓存。USB 和 Wi-Fi 均使用 audio_select，仅在缓存缺失时使用 audio_begin/audio_chunk/audio_finish，每块不超过 65,536 字节。缓存最多8个文件、8 MiB。widget_layout 的 audio_hash/audio_volume 与下一个有效帧同时生效。仅改变音量时保留播放器；省略声音请求则停止。进入后台、断开连接、休眠或退出小组件均停止播放。失去音频焦点后不会反复抢占。原有 `audio:1` 仍在电脑播放。不向小组件授予用户文件写入或删除权限，仅由宿主管理专用缓存。
 
 独立编写的小组件可以免费或付费分发，由作者制定价格和使用条款。自主销售无须向巴罗哈姆支付额外 API 费用或销售分成。重用 MIT 示例时须保留版权声明和许可证；其他代码、图片和音频仍遵守各自许可证。本许可不授权整体重用主程序代码或品牌。完整条件请参阅 WIDGET-LICENSE.zh-Hans.txt。
+
+从 Studio 0.9.46 开发版起，可用 `settings:3` 声明最多 16 个设置项。 在 Studio 0.9.46 开发版中，声明 `requires.sky:1` 和 `permissions.sky:true` 后可从 `api.host.sky` 读取天气地区的天空数据。current 使用当前时刻，day 和 night 使用当地同一太阳日内代表白昼和夜晚的时刻。每项包含 sun 和 moon，azimuth 是方位角（正北 0°、正东 90°），altitude 是高度角（地平线 0°）。moon.illuminated 是月面受光比例（0–1）。地区不可用时返回 null，组件不会收到位置坐标。

@@ -1,6 +1,6 @@
 # Baroham ウィジェットAPI — 公開開発ガイド
 
-改訂：2026-11-03。既存のHello・viewport例の案内基準はWindows Studio 0.9.41以降、macOS 0.9.40 build148以降のままです。新しい条件付き設定（`settings:2`）と端末音声（`audio:2`）には両環境ともStudio 0.9.45以降が必要で、macOS build153をローカルで検証しました。Androidでの音声には端末アプリ0.5.56以降も必要です。Studioの更新だけでは端末アプリは更新されません。audio:2ではESP32は無音、PC再生は仮想画面のみを使用する場合です。配布中のバージョンは公式サイトをご確認ください。両ホストはこのガイドとHello例の同じ形式を使います。ウィジェットはPCのStudioで実行し、Android・ESP32・仮想画面へ描画結果を送ります。JavaScript ZIPはAndroidアプリやESP32ファームウェアではありません。
+改訂：2026-11-05。既存のHello・viewport例の案内基準はWindows Studio 0.9.41以降、macOS 0.9.40 build148以降のままです。新しい条件付き設定（`settings:2`）と端末音声（`audio:2`）には両環境ともStudio 0.9.45以降が必要で、macOS build153をローカルで検証しました。Androidでの音声には端末アプリ0.5.56以降も必要です。Studioの更新だけでは端末アプリは更新されません。audio:2ではESP32は無音、PC再生は仮想画面のみを使用する場合です。配布中のバージョンは公式サイトをご確認ください。両ホストはこのガイドとHello例の同じ形式を使います。ウィジェットはPCのStudioで実行し、Android・ESP32・仮想画面へ描画結果を送ります。JavaScript ZIPはAndroidアプリやESP32ファームウェアではありません。
 
 ## パッケージ
 
@@ -24,7 +24,7 @@ ZIP制限：圧縮・展開総量それぞれ8 MiB、128ファイル、1ファ�
 - api.contentRect：同一座標の{x,y,width,height}。ホストの上部・左右端のナビゲーションを除く領域です。操作要素はこの中に置いてください。
 - api.now：Unixミリ秒。全予定フレームが送信されるとは仮定せず、経過時間からアニメーションを計算します。
 - api.language、api.t(key, fallback)：locales/ko.json、en.json、ja.json、zh-Hans.json。
-- api.settings：検証済み設定。settings.jsonは最大12フィールドの配列です。key、type、label、default、任意labelKeyを持ちます。型：text（200文字以下）、toggle（boolean）、choice（choices [{value,label,labelKey?}]）、multi（宣言済みHTTPS JSONから順序付き選択肢。マッピングはSDK参照）。
+- api.settings：検証済み設定。settings.jsonは最大12フィールドの配列です。key、type、label、default、任意labelKeyを持ちます。型：text（200文字以下）、toggle（boolean）、choice（choices [{value,label,labelKey?}]）、multi（宣言済みHTTPS JSONから順序付き選択肢。マッピングはSDK参照）。 Studio 0.9.46 開発版以降では `settings:3` で最大16項目を設定できます。
 - api.state：32 KiB以下のJSON。メモリのみで、Studio再起動・パッケージ交換・キャッシュ破棄でリセットされます。プレビューと有効画面で共有します。
 - api.useThemeBackground?.()：選択テーマを最初に描くよう要求します。透明部分に見え、不透明描画で隠れます。
 
@@ -78,6 +78,10 @@ api.drawSprite("asset:assets/actor.webp",sx,sy,sw,sh,dx,dy,dw,dh)
 hostApiVersion:1とrequires:{"canvas":1,"system":1,...}を宣言できます。host-api.jsonは版の登録簿で、任意APIの許可ではありません。完全な宣言・権限の組はSDKのHOST-API.mdと例を参照します。非対応機能はインポート時に拒否します。
 
 スクリプトはsystem、media、weatherの読み取り専用api.hostスナップショットを要求できます。未取得センサーは0ではなくnullです。パス、メディア操作ハンドル、OSコマンド、位置座標は公開しません。HTTPSとの併用はPCメタデータを外部へ送信し得るため、必要な場合にのみ要求し説明します。
+
+Studio 0.9.46 開発版では、`requires.sky:1` と `permissions.sky:true` を宣言すると、天気に設定した地点の空を `api.host.sky` で取得できます。`current` は現在の時刻、`day` と `night` はその地点の経度に基づく地方平均太陽時で同じ日の正午と真夜中に対応します。各項目の `sun` と `moon` は、真北を基準に時計回りに測った方位角 `azimuth`（北 0°、東 90°）と、地平線を基準にした高度 `altitude`（地平線 0°、その下は負）を度単位で返します。地点を取得できない場合、`api.host.sky` は null です。緯度・経度は Studio 内で処理します。
+
+`moon.illuminated` は地上から見える月面のうち照らされている割合（0〜1）です。`moon.phase` は新月で 0 に戻る周期値です（0 は新月、0.25 は上弦、0.5 は満月、0.75 は下弦）。`moon.limbAngle` は月の明るい側の向きを示します。地平線が水平な画面で真上を 0° とし、方位角が増える方向へ時計回りに測ります（右が 90°）。
 
 宣言型packageVersion2はdefinition.json、必要時defaults、settings.json:[]、runtime:"declarative"を使い、main.jsはありません。
 - dashboard-v1：検証済み時計・システム・天気・メディアのレイヤー。

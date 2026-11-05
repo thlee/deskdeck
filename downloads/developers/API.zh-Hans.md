@@ -1,6 +1,6 @@
 # Baroham 小组件 API — 公开开发指南
 
-修订日期：2026-11-03。现有Hello及viewport示例的文档基线仍为Windows Studio 0.9.41及以上、macOS 0.9.40 build148及以上。新的条件设置（`settings:2`）和设备音频（`audio:2`）要求两平台均使用Studio 0.9.45及以上；macOS build153已在本地验证。Android声音还需手机应用0.5.56及以上。更新Studio不会同时更新手机应用。audio:2在ESP32上保持静音，仅使用虚拟屏幕时才在电脑播放。可下载版本请查看官网。两端使用本指南及 Hello 示例的同一格式。小组件在 PC 的 Studio 中运行，Android、ESP32 和虚拟屏幕接收渲染结果。JavaScript ZIP 不是 Android 应用或 ESP32 固件。
+修订日期：2026-11-05。现有Hello及viewport示例的文档基线仍为Windows Studio 0.9.41及以上、macOS 0.9.40 build148及以上。新的条件设置（`settings:2`）和设备音频（`audio:2`）要求两平台均使用Studio 0.9.45及以上；macOS build153已在本地验证。Android声音还需手机应用0.5.56及以上。更新Studio不会同时更新手机应用。audio:2在ESP32上保持静音，仅使用虚拟屏幕时才在电脑播放。可下载版本请查看官网。两端使用本指南及 Hello 示例的同一格式。小组件在 PC 的 Studio 中运行，Android、ESP32 和虚拟屏幕接收渲染结果。JavaScript ZIP 不是 Android 应用或 ESP32 固件。
 
 ## 软件包
 
@@ -24,7 +24,7 @@ ZIP 限制：压缩及解压总量各 8 MiB，128 个文件，每文件 1 MiB，
 - api.contentRect：相同坐标系的 {x,y,width,height}，排除宿主顶部及左右边缘导航区域。请将控件放在此区域内。
 - api.now：Unix 毫秒。按经过时间计算动画，不要假设每个计划帧都会传送。
 - api.language；api.t(key, fallback)：locales/ko.json、en.json、ja.json、zh-Hans.json。
-- api.settings：验证后的设置。settings.json 是最多 12 个字段的数组，每项包含 key、type、label、default，可选 labelKey。类型：text（不超过 200 字符）、toggle（boolean）、choice（choices [{value,label,labelKey?}]）、multi（来自已声明 HTTPS JSON 端点的有序选项，映射参见 SDK）。
+- api.settings：验证后的设置。settings.json 是最多 12 个字段的数组，每项包含 key、type、label、default，可选 labelKey。类型：text（不超过 200 字符）、toggle（boolean）、choice（choices [{value,label,labelKey?}]）、multi（来自已声明 HTTPS JSON 端点的有序选项，映射参见 SDK）。 从 Studio 0.9.46 开发版起，可用 `settings:3` 声明最多 16 个设置项。
 - api.state：不超过 32 KiB 的 JSON 状态，仅保存在内存。Studio 重启、包替换或缓存淘汰时重置。预览和活动帧共享此状态。
 - api.useThemeBackground?.()：请求宿主先绘制所选主题。透明部分可看到背景，不透明绘图会遮盖它。
 
@@ -78,6 +78,10 @@ api.drawSprite("asset:assets/actor.webp",sx,sy,sw,sh,dx,dy,dw,dh)
 可声明 hostApiVersion:1 和 requires:{"canvas":1,"system":1,...}。附带的 host-api.json 是版本注册表，不是任意 API 的授权。完整声明与权限搭配请参阅 SDK 的 HOST-API.md 和示例。不支持的能力会在导入时拒绝。
 
 脚本可请求 system、media、weather 的只读 api.host 快照。不可用传感器值为 null，不是零。不会暴露路径、媒体控制句柄、OS 命令或位置坐标。快照结合 HTTPS 可能向外泄露 PC 元数据，只有必要时才同时请求并作出说明。
+
+在 Studio 0.9.46 开发版中，声明 `requires.sky:1` 和 `permissions.sky:true` 后，可以从 `api.host.sky` 读取天气设置中所选地点的天空数据。`current` 使用当前时刻，`day` 和 `night` 分别使用按该地点经度确定的当地平太阳时当天的正午和午夜。每项包含 `sun` 和 `moon`，其中方位角 `azimuth` 从正北开始顺时针计算（北 0°、东 90°），高度角 `altitude` 以地平线为 0°，地平线以下为负值。地点不可用时，`api.host.sky` 为 null。经纬度仅由 Studio 在内部处理。
+
+`moon.illuminated` 是可见月面被照亮的比例（0–1）。`moon.phase` 表示月相周期，每逢新月回到 0（0 为新月，0.25 为上弦，0.5 为满月，0.75 为下弦）。`moon.limbAngle` 表示月亮亮面朝向。在地平线水平的画面中，从正上方 0° 起，朝方位角增大的方向顺时针计量，正右方为 90°。
 
 声明式 packageVersion2 使用 definition.json、按需 defaults、settings.json:[]、runtime:"declarative"，不包含 main.js：
 - dashboard-v1：组合验证过的时钟、系统、天气和媒体图层。
