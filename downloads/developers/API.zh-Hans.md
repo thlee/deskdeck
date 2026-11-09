@@ -106,8 +106,14 @@ api.drawSprite("asset:assets/actor.webp",sx,sy,sw,sh,dx,dy,dw,dh)
 
 在设置字段中使用 `visibleWhen` 需要声明 `settings:2`。对象包含其他 choice/toggle 字段的 1–3 个键及其有效值，全部匹配时才显示。隐藏值仍会保留并保存，取消则放弃编辑。不执行表达式。
 
+Studio 0.9.46的`settings:3`允许choice字段声明`presentation:"radio"`显示横排单选按钮，或`presentation:"select"`显示下拉框（默认）。简短下拉框与标签自动并排，窄窗口或较长文字会换行。visibleWhen的值可为包含1–32个有效源值的数组：`{"scene":["rain","campfire"]}`匹配任一场景即可显示，不同键仍须全部匹配。空数组、无效值及嵌套表达式均被拒绝。隐藏值保持不变，不增加文件访问权限。休闲1.0.5仅在雨景/篝火中显示音量，是完整示例。现有settings:1/2包继续受支持。
+
 使用 `api.playSound("rain", 0.2)` 需声明 `audio:1`、`permissions.audio:true` 和 `sounds`。每个声音映射到包内 `assets/<name>.wav`。仅接受 44 字节标准头的 PCM16 WAV，单/双声道，8–48 kHz，1–30 秒，最多 8 个、每个 1 MiB、总计 2 MiB。通过电脑扬声器循环播放一个声音，每个活动帧重复请求以保持播放；省略请求或音量为 0 则停止。音量必须是 0–1 的有限数。预览和安装检查不会播放声音。退出小组件、显示器休眠、隔离或退出应用时停止。主机控制播放器，不提供麦克风、任意 URL/路径或文件写入权限，不向 Android/ESP32 传输此声音。
 
-交互式环境小组件可在 manifest 中设定 `autoRotate:true` 以允许 Studio 的常规轮换。为兼容游戏，默认 false。Relax 包是包含场景设置及原创合成雨声的完整示例。
+交互式环境小组件可在 manifest 中设定 `autoRotate:true` 以允许 Studio 的常规轮换。为兼容游戏，默认 false。Relax 包是包含场景设置及随包提供的CC0雨声与篝火实录的完整示例。
 
 `audio:2`（Studio 0.9.45+、Android 0.5.56+）沿用相同 API 和限制，但在连接的 Android 设备上播放。仅使用虚拟屏幕时在电脑上播放。ESP32 及不支持 audio_cache 的 Android 保持静音，不回退到电脑播放。Android 声明 `audio_cache:"pcm16-v1"`，并将经过 SHA-256 验证的 WAV 保存在应用私有缓存。USB 和 Wi-Fi 均使用 audio_select，仅在缓存缺失时使用 audio_begin/audio_chunk/audio_finish，每块不超过 65,536 字节。缓存最多8个文件、8 MiB。widget_layout 的 audio_hash/audio_volume 与下一个有效帧同时生效。仅改变音量时保留播放器；省略声音请求则停止。进入后台、断开连接、休眠或退出小组件均停止播放。失去音频焦点后不会反复抢占。原有 `audio:1` 仍在电脑播放。不向小组件授予用户文件写入或删除权限，仅由宿主管理专用缓存。
+
+`astronomy:1`（Studio0.9.47及以上）提供`api.host.astronomy.moon`。根据天气地区和UTC时间在本地计算只读数据，按分钟缓存，无需查询天气服务器。字段：phase（0新月、.25上弦、.5满月、.75下弦）、illumination（0–1）、positionAvailable（boolean）、azimuth（从北顺时针的度数）、altitude（地平线上视高度，度）、rotation（右侧亮圆盘的Canvas顺时针旋转，弧度）、aboveHorizon（boolean）。地区无效时位置字段和aboveHorizon为null，仍计算月相和照明比例。无效日期或1900–2100年以外返回moon=null。不包含坐标、城市名或凭据，未声明能力的组件无法获取。结果是装饰性近似值，不用于导航。随渲染器提供SunCalc1.9.0（BSD-2-Clause）的许可证与源文件哈希。
+
+在 Studio 0.9.49 中，`requires.weather:2` 为 `api.host.weather` 增加 `code` 和 `condition`。`condition` 为 `clear`、`cloudy`、`rain`、`snow` 或 `null`。`code` 是天气适配器的数字代码，雨夹雪使用 68/69。0/1 表示晴，2/3/45/48 表示云，雨和雷雨代码归为雨，雪和雨夹雪代码归为雪。仅使用有效观测或预报，过期或失败时 temperature/code/condition 为 null、description 为空字符串。未知状态的 code/condition 为 null。小组件使用 Studio 缓存，不接收坐标或地名。`weather:1` 保持原有 temperature/description 接口。

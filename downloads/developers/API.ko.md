@@ -108,8 +108,14 @@ Studio 0.9.46 개발판에서 `requires.sky:1`과 `permissions.sky:true`를 선�
 
 설정 항목에 `visibleWhen`을 사용하려면 `settings:2`를 선언합니다. 다른 choice/toggle 항목의 키와 정확한 유효 값을 1–3개 지정하며 모두 일치할 때만 표시합니다. 숨긴 값도 보존·저장되고 취소하면 편집을 버립니다. 표현식은 실행하지 않습니다.
 
+Studio 0.9.46의 `settings:3`에서는 choice 필드에 `presentation:"radio"`로 한 줄 라디오 선택지를, `presentation:"select"`로 콤보박스(기본값)를 지정합니다. 짧은 콤보박스는 이름과 한 줄에 자동 배치하고 좁은 창이나 긴 문구는 줄바꿈합니다. settings:3의 visibleWhen 값에는 유효한 원본 값 1–32개의 배열을 쓸 수 있습니다. `{"scene":["rain","campfire"]}`는 두 장면 중 하나와 일치하면 표시합니다. 서로 다른 키는 모두 일치해야 합니다. 빈 배열·잘못된 값·중첩 표현식은 거부합니다. 숨긴 값은 유지하며 파일 접근 권한을 추가하지 않습니다. 휴식1.0.5는 비·모닥불에서만 음량을 표시하는 완전한 예제입니다. 기존 settings:1/2 패키지도 계속 지원합니다.
+
 `api.playSound("rain", 0.2)`에는 `audio:1`, `permissions.audio:true`, `sounds` 선언이 필요합니다. 각 소리는 패키지 내부 `assets/<name>.wav`로 연결합니다. 44바이트 표준 헤더 PCM16 WAV, 모노/스테레오, 8–48 kHz, 1–30초만 허용합니다. 최대 8개, 파일당 1 MiB, 합계 2 MiB입니다. PC 스피커에서 소리 하나를 반복 재생하며 활성 프레임마다 요청을 유지합니다. 요청을 생략하거나 음량 0으로 중단합니다. 음량은 0–1의 유한수입니다. 미리보기·설치 검사에서는 재생하지 않습니다. 위젯 종료·화면 절전·격리·앱 종료 시 멈춥니다. 호스트가 재생기를 관리하며 마이크·임의 URL/경로·파일 쓰기 권한은 없습니다. Android/ESP32에는 이 소리를 전송하지 않습니다.
 
-상호작용하는 휴식 위젯은 manifest의 `autoRotate:true`로 Studio의 일반 위젯 순환을 허용할 수 있습니다. 게임 호환성을 위해 기본값은 false입니다. Relax 패키지는 장면별 설정과 자체 제작 빗소리의 완전한 예제입니다.
+상호작용하는 휴식 위젯은 manifest의 `autoRotate:true`로 Studio의 일반 위젯 순환을 허용할 수 있습니다. 게임 호환성을 위해 기본값은 false입니다. Relax 패키지는 장면별 설정과 동봉한 CC0 빗소리·장작 녹음의 완전한 예제입니다.
 
 `audio:2`(Studio 0.9.45+, Android 0.5.56+)는 같은 API와 제한을 사용하되 연결된 Android 기기에서 재생합니다. 가상 화면만 사용하는 경우 PC에서 재생합니다. ESP32 및 audio_cache 기능이 없는 Android에는 소리를 보내지 않으며 PC로 우회하지 않습니다. Android는 `audio_cache:"pcm16-v1"`을 광고하고 SHA-256으로 검증한 WAV를 앱 내부 캐시에 보관합니다. USB와 Wi-Fi 모두 audio_select → 캐시 없을 때 audio_begin/audio_chunk/audio_finish를 사용하며 청크는 65,536바이트 이하입니다. 전체 캐시는 8개·8 MiB로 제한합니다. widget_layout의 audio_hash/audio_volume은 다음 정상 프레임과 함께 적용합니다. 음량만 변경해도 재생기는 유지하고, 장면에서 소리 요청을 빼면 중단합니다. 앱이 배경으로 가거나 연결·화면·위젯이 종료되면 중단합니다. 오디오 포커스를 잃으면 해당 소리를 자동으로 반복 재시작하지 않습니다. 기존 `audio:1`은 PC 재생을 유지합니다. 파일 수정·삭제 권한은 위젯에 제공하지 않으며, 호스트의 전용 캐시 정리만 허용합니다.
+
+`astronomy:1`(Studio0.9.47+)은 `api.host.astronomy.moon`을 제공합니다. 날씨 지역과 UTC시각으로 PC에서 계산하고 1분 단위로 재사용하는 읽기 전용 정보이며 날씨 서버를 조회하지 않습니다. 필드: phase(0삭·.25상현·.5보름·.75하현), illumination(0–1), positionAvailable(boolean), azimuth(북쪽0도부터 시계방향 방위각), altitude(지평선 위 겉보기 고도, 도), rotation(오른쪽이 밝은 달 그림에 적용할 시계방향 회전, 라디안), aboveHorizon(boolean). 유효한 지역이 없으면 위치값과 aboveHorizon은 null이고 위상·조명비율은 계산합니다. 잘못된 날짜나1900–2100년 밖은 moon=null입니다. 좌표·도시명·인증정보는 포함하지 않습니다. 선언하지 않은 위젯에는 제공하지 않습니다. 장식용 근사값으로 항법용이 아닙니다. SunCalc1.9.0(BSD-2-Clause)의 라이선스와 소스 해시를 렌더러에 동봉합니다.
+
+Studio 0.9.49에서 `requires.weather:2`를 선언하면 `api.host.weather`에 `code`와 `condition`이 추가됩니다. `condition`은 `clear`, `cloudy`, `rain`, `snow` 또는 `null`입니다. `code`는 기존 날씨 어댑터의 숫자 코드이며 진눈깨비는 68/69입니다. 코드 0/1은 맑음, 2/3/45/48은 구름, 비·뇌우 코드는 비, 눈·진눈깨비 코드는 눈으로 묶습니다. 유효한 관측·예보만 사용하며 만료·실패 시 temperature/code/condition은 null, description은 빈 문자열입니다. 알 수 없는 상태는 code/condition이 null입니다. 위젯은 지역 좌표나 지명 없이 Studio의 캐시만 받습니다. `weather:1`은 기존 temperature/description 계약을 유지합니다.

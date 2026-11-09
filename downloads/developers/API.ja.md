@@ -106,8 +106,14 @@ Studio 0.9.46 開発版では、`requires.sky:1` と `permissions.sky:true` を�
 
 設定に `visibleWhen` を使うには `settings:2` を宣言します。他の choice/toggle 項目のキーと有効な値を1～3個指定し、全条件が一致する場合に表示します。非表示の値も保持・保存し、キャンセルで編集を破棄します。式は実行しません。
 
+Studio 0.9.46の`settings:3`ではchoice項目の`presentation:"radio"`で横並びラジオボタン、`presentation:"select"`でドロップダウン（既定）を指定します。短いドロップダウンは項目名と同じ行に配置し、狭い幅や長い文言では折り返します。visibleWhenの値に有効な値1～32個の配列を指定できます。`{"scene":["rain","campfire"]}`はどちらかに一致すれば表示します。異なるキーはすべて一致する必要があります。空配列・無効な値・入れ子の式は拒否します。非表示の値は保持し、ファイルアクセス権限は追加しません。くつろぎ1.0.5の雨・焚き火のみの音量表示が完全な例です。既存のsettings:1/2も引き続き対応します。
+
 `api.playSound("rain", 0.2)` には `audio:1`、`permissions.audio:true`、`sounds` を宣言します。音声はパッケージ内の `assets/<name>.wav` に対応します。44バイト標準ヘッダーの PCM16 WAV、モノラル/ステレオ、8–48 kHz、1–30秒のみ許可し、最大8個、各1 MiB、合計2 MiBです。PC スピーカーで1音声をループ再生します。有効な各フレームで要求を続け、省略または音量0で停止します。音量は0～1の有限数です。プレビューやインストール検査は無音です。終了・画面消灯・隔離・アプリ終了で停止します。ホストがプレーヤーを管理し、マイク・任意の URL/パス・ファイル書き込み権限は与えません。Android/ESP32 にこの音声を転送しません。
 
-対話型の環境ウィジェットは manifest の `autoRotate:true` で通常のウィジェット循環を許可できます。ゲーム互換性のため既定は false です。Relax はシーン別設定と独自の雨音の完全な例です。
+対話型の環境ウィジェットは manifest の `autoRotate:true` で通常のウィジェット循環を許可できます。ゲーム互換性のため既定は false です。Relax はシーン別設定と同梱CC0の雨・焚き火の実録音の完全な例です。
 
 `audio:2`（Studio 0.9.45 以降、Android 0.5.56 以降）は同じ API と制限で、接続中の Android 端末から再生します。仮想画面のみなら PC で再生します。ESP32 と audio_cache 非対応 Android は無音で、PC への代替再生はしません。Android は `audio_cache:"pcm16-v1"` を通知し、SHA-256 検証済み WAV をアプリ専用キャッシュに保存します。USB・Wi-Fi とも audio_select、未保存なら audio_begin/audio_chunk/audio_finish を使い、チャンクは最大 65,536 バイトです。キャッシュは最大8ファイル・8 MiBです。widget_layout の audio_hash/audio_volume は次の正常なフレームで適用します。音量変更では再生器を維持し、音声要求を省略すると停止します。バックグラウンド・切断・消灯・ウィジェット終了でも停止します。音声フォーカスを失っても繰り返し奪い返しません。従来の `audio:1` は PC 再生を維持します。ユーザーファイルの書き込み・削除権限は与えず、ホストだけが専用キャッシュを管理します。
+
+`astronomy:1`（Studio0.9.47以降）は`api.host.astronomy.moon`を提供します。天気の地域とUTC日時による読み取り専用のローカル計算を1分単位で再利用し、サーバーには問い合わせません。phase（0新月・.25上弦・.5満月・.75下弦）、illumination（0–1）、positionAvailable（boolean）、azimuth（北から時計回りの度数）、altitude（地平線上の見かけの高度、度）、rotation（右側が明るい円盤用の時計回りCanvas回転、ラジアン）、aboveHorizon（boolean）を返します。地域不明時は位置値とaboveHorizonがnullで、月相・照明比率のみ計算します。不正な日時や1900–2100年外はmoon=nullです。座標・都市名・認証情報は含まず、未宣言のウィジェットにも提供しません。装飾用近似値で航法用ではありません。SunCalc1.9.0（BSD-2-Clause）のライセンスとソースハッシュを同梱します。
+
+Studio 0.9.49 では `requires.weather:2` により `api.host.weather` に `code` と `condition` が加わります。`condition` は `clear`、`cloudy`、`rain`、`snow` または `null` です。`code` は天気アダプターの数値コードで、みぞれは 68/69 です。0/1 は晴れ、2/3/45/48 は曇り、雨・雷雨コードは雨、雪・みぞれコードは雪に分類します。有効な観測・予報のみを使い、期限切れや失敗では temperature/code/condition は null、description は空文字になります。不明な状態の code/condition は null です。座標や地名は渡さず、Studio のキャッシュを再利用します。`weather:1` の temperature/description 仕様は維持します。
