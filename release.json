@@ -1,13 +1,13 @@
 {
-  "version": "0.9.42",
-  "date": "2026-10-31",
+  "version": "0.9.49",
+  "date": "2026-11-13",
   "platform": "windows-x64",
-  "installer": "https://github.com/thlee/deskdeck/releases/download/v0.9.42/DeskDeck-Setup-0.9.42-x64.exe",
-  "release": "https://github.com/thlee/deskdeck/releases/tag/v0.9.42",
-  "android": "0.5.55",
+  "installer": "https://github.com/thlee/deskdeck/releases/download/v0.9.49/DeskDeck-Setup-0.9.49-x64.exe",
+  "release": "https://github.com/thlee/deskdeck/releases/tag/v0.9.49",
+  "android": "0.5.56",
   "firmware": "0.8.2",
   "terms": "2026-10-18-public",
   "donations": false,
-  "sha256": "75434ac6631f0e4546853d4f3c77e2a6f0ebee779141a677f5751e3d21cd1684",
-  "size_bytes": 348698005
+  "sha256": "b75a71c0df77613c2a9115e1fcb00c79c16a5f66c0107aed8383d7affc64fb1f",
+  "size_bytes": 348735883
 }

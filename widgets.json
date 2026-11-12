@@ -131,6 +131,75 @@
       "size": 6475
     },
     {
+      "id": "deskdeck.relax",
+      "package": "deskdeck.relax.deskdeck-widget.zip",
+      "minStudio": "0.9.49",
+      "published": "2026-11-13",
+      "version": "1.1.2",
+      "url": "downloads/widgets/deskdeck.relax-1.1.2.deskdeck-widget.zip",
+      "sha256": "3ec7dac920371049b744b0f97aa7e56ff8d0f5f04b5db3cdac629fee145b3d5f",
+      "size": 1626739,
+      "category": "relax",
+      "network": [],
+      "license": "MIT; audio CC0",
+      "preview": {
+        "ko": "relax.png",
+        "en": "relax.png"
+      },
+      "name": {
+        "ko": "휴식",
+        "en": "Relax",
+        "ja": "くつろぎ",
+        "zh-Hans": "休闲"
+      },
+      "description": {
+        "ko": "어항·모닥불·빗소리 창가·풍경을 한 위젯에서 골라 감상하세요. 풍경은 설정한 지역의 시간과 날씨를 반영합니다.",
+        "en": "Choose Aquarium, Campfire, Rainy window or Landscape in one widget. Landscape follows the time and weather for your selected region.",
+        "ja": "水槽・焚き火・雨の窓辺・風景を1つのウィジェットで選べます。風景は設定した地域の時刻と天気を反映します。",
+        "zh-Hans": "在一个小组件中选择水族箱、篝火、雨中窗边或风景。风景会反映所选地区的时间和天气。"
+      },
+      "updateNote": {
+        "ko": "Studio 0.9.49 이상이 필요합니다. Android 소리는 앱 0.5.56 이상에서 지원하며 ESP32는 무음입니다. 기존 개별 어항·모닥불 ZIP도 계속 사용할 수 있습니다.",
+        "en": "Requires Studio 0.9.49+. Android audio needs app 0.5.56+; ESP32 is silent. Existing standalone Aquarium and Campfire ZIPs remain usable.",
+        "ja": "Studio 0.9.49以降が必要です。Androidの音声にはアプリ0.5.56以降が必要で、ESP32は無音です。従来の水槽・焚き火の個別ZIPも引き続き使えます。",
+        "zh-Hans": "需要 Studio 0.9.49 或更高版本。Android 音频需要应用 0.5.56 或更高版本；ESP32 无声。原有独立水族箱和篝火 ZIP 仍可使用。"
+      },
+      "networkLabel": {
+        "ko": "날씨 연동은 Studio가 받은 정보를 재사용하며 위젯의 별도 서버 요청은 없습니다.",
+        "en": "Weather uses Studio’s cached data; the widget makes no separate server requests.",
+        "ja": "天気にはStudioのキャッシュ情報を使い、ウィジェットからサーバーに個別リクエストは送りません。",
+        "zh-Hans": "天气使用 Studio 已缓存的数据，小组件不会单独请求服务器。"
+      },
+      "previewCaption": {
+        "ko": "휴식 위젯의 실제 모닥불 장면입니다.",
+        "en": "The Campfire scene rendered by the Relax widget.",
+        "ja": "くつろぎウィジェットで描画した焚き火の場面です。",
+        "zh-Hans": "休闲小组件实际渲染的篝火场景。"
+      },
+      "features": {
+        "ko": [
+          "네 장면 선택·자동 순환과 장면별 설정",
+          "녹음된 비·장작 소리와 음량 설정 — Android 또는 가상 화면의 PC에서 재생",
+          "날씨 지역의 해·달과 맑음·구름·비·눈 표현"
+        ],
+        "en": [
+          "Four scenes, automatic cycling and per-scene settings",
+          "Recorded rain and fire sounds with volume control, on Android or the virtual screen’s PC",
+          "Regional Sun and Moon positions, plus clear, cloudy, rainy and snowy weather"
+        ],
+        "ja": [
+          "4つの場面・自動切り替え・場面ごとの設定",
+          "録音した雨音・焚き火音と音量調整。Androidまたは仮想画面のPCで再生",
+          "地域の日月の位置と晴れ・曇り・雨・雪を表現"
+        ],
+        "zh-Hans": [
+          "四种场景、自动轮播和独立场景设置",
+          "录制的雨声和篝火声，可调音量；在 Android 或虚拟屏幕所在的 PC 上播放",
+          "根据地区显示日月位置及晴、阴、雨、雪天气"
+        ]
+      }
+    },
+    {
       "id": "deskdeck.campfire",
       "package": "deskdeck.campfire.deskdeck-widget.zip",
       "minStudio": "0.9.11",
